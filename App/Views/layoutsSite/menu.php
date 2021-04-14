@@ -37,31 +37,11 @@
                         </div>
                         <div class="main-nav__main-navigation four">
                             <ul class="main-nav__navigation-box">
-                                <li class="dropdown current">
-                                    <a href="index.html">Home</a>
-                                    <ul>
-                                        <li><a href="index.html">Home 01</a></li>
-                                        <li><a href="index2.html">Home 02</a></li>
-                                        <li><a href="index3.html">Home 03</a></li>
-                                        <li><a href="index4.html">Home 04</a></li>
-                                        <li><a href="index5.html">Home 05</a></li>
-                                        <li class="dropdown"><a href="#">Header Versions</a>
-                                            <ul>
-                                                <li><a href="index.html">Header 01</a></li>
-                                                <li><a href="index2.html">Header 02</a></li>
-                                                <li><a href="index3.html">Header 03</a></li>
-                                                <li><a href="index4.html">Header 04</a></li>
-                                                <li><a href="index5.html">Header 05</a></li>
-                                            </ul><!-- /.sub-menu -->
-                                        </li>
-                                    </ul><!-- /.sub-menu -->
+                                 <li>
+                                    <a href="<?=LINK?>">Início</a>
                                 </li>
-                                <li class="dropdown">
-                                    <a href="service.html">Services</a>
-                                    <ul>
-                                        <li><a href="service.html">Services</a></li>
-                                        <li><a href="service-detail.html">Services Detail</a></li>
-                                    </ul><!-- /.sub-menu -->
+                                <li>
+                                    <a href="<?= LINK ?>sobre">Sobre Nós</a>
                                 </li>
                                 <li class="dropdown">
                                     <a href="projects.html">Our Projects</a>
