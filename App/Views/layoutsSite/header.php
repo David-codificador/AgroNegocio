@@ -13,7 +13,6 @@
 
         <!-- plugin scripts -->
 
-
         <link rel="stylesheet" href="<?= CSSSITE ?>animate.min.css">
         <link rel="stylesheet" href="<?= CSSSITE ?>bootstrap.min.css">
         <link rel="stylesheet" href="<?= CSSSITE ?>owl.carousel.min.css">
