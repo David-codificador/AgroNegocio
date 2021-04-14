@@ -14,8 +14,8 @@ class App {
     public  $controllerName;
 
     public function __construct() {
-        define('TITLESITE',          "Agronegocio");
-        define('APP_HOST',           $_SERVER['HTTP_HOST'] . "/Agronegocio");
+        define('TITLESITE',          "AgroNegocio");
+        define('APP_HOST',           $_SERVER['HTTP_HOST'] . "/AgroNegocio");
         define('PATH',               realpath('./'));
         define('LINK',               'http://' . APP_HOST . '/');
         define('RECURSO',            LINK . '/public/');
