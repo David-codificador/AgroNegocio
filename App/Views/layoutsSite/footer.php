@@ -1,6 +1,6 @@
 
 <footer class="site-footer">
-    <div class="site-footer_farm_image"><img src="assets/images/resources/site-footer-farm.png"
+    <div class="site-footer_farm_image"><img src="<?=IMAGEMSITE ?>resources/site-footer-farm.png"
                                              alt="Farm Image"></div>
     <div class="container">
         <div class="row">
@@ -44,7 +44,7 @@
                     <ul class="footer-widget__news list-unstyled">
                         <li>
                             <div class="footer-widget__news_image">
-                                <img src="assets/images/resources/footer-1-img-1.jpg" alt="">
+                                <img src="<?=IMAGEMSITE ?>resources/footer-1-img-1.jpg" alt="">
                             </div>
                             <div class="footer-widget__news_text">
                                 <p><a href="news_detail.html"> Learn 10 Best Tips for New Formers</a></p>
@@ -55,7 +55,7 @@
                         </li>
                         <li>
                             <div class="footer-widget__news_image">
-                                <img src="assets/images/resources/footer-1-img-2.jpg" alt="">
+                                <img src="<?=IMAGEMSITE ?>resources/footer-1-img-2.jpg" alt="">
                             </div>
                             <div class="footer-widget__news_text">
                                 <p><a href="news_detail.html">Farmer Sentiment Darkens Hopes Fade</a></p>
@@ -123,7 +123,7 @@
         <div class="side-menu__top justify-content-end">
 
             <a href="#" class="side-menu__toggler side-menu__close-btn"><img
-                    src="assets/images/shapes/close-1-1.png" alt=""></a>
+                    src="<?=IMAGEMSITE ?>shapes/close-1-1.png" alt=""></a>
         </div><!-- /.side-menu__top -->
 
 

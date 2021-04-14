@@ -19,7 +19,9 @@ class App {
         define('PATH',               realpath('./'));
         define('LINK',               'http://' . APP_HOST . '/');
         define('RECURSO',            LINK . '/public/');
-
+        define('EMAIL',              "");
+        
+        
         define('CSS',                RECURSO . 'css/');
         define('CSSTEMPLATE',        RECURSO . 'css/template/');
         define('JS',                 RECURSO . 'js/');
