@@ -23,71 +23,42 @@
         </div>
     </div>
 
-    <header class="main-nav__header-one">
+    <header class="main-nav__header-one corpo">
         <nav class="header-navigation stricky">
             <div class="container clearfix">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="main-nav__left">
-                    <a href="#" class="main-nav__search search-popup__toggler"><i
-                            class="icon-magnifying-glass"></i></a>
-                    <a href="#" class="side-menu__toggler">
-                        <i class="fa fa-bars"></i>
-                    </a>
+
                 </div>
                 <div class="main-nav__main-navigation">
                     <ul class=" main-nav__navigation-box">
                         <li>
-                            <a href="<?=LINK?>">Início</a>
+                            <a href="<?= LINK ?>">Início</a>
                         </li>
                         <li>
-                            <a href="<?=LINK?>sobre">Sobre</a>
-                        </li>
-                        
-                        <li class="dropdown">
-                            <a href="projects.html">Our Projects</a>
-                            <ul>
-                                <li><a href="projects.html">Projects</a></li>
-                                <li><a href="projects_detail.html">Projects Detail</a></li>
-                            </ul><!-- /.sub-menu -->
+                            <a href="<?= LINK ?>sobre">Sobre</a>
                         </li>
                         <li class="dropdown">
-                            <a href="#">Shop</a>
+                            <a href="#">Produtos</a>
                             <ul>
-                                <li><a href="product.html">Products</a></li>
-                                <li><a href="product-detail.html">Product Detail</a></li>
-                                <li><a href="cart.html">Cart</a></li>
-                                <li><a href="checkout.html">Checkout</a></li>
+                                <li><a href="news.html">Melancia Style</a></li>
+                                <li><a href="news_detail.html">Melancia Manchester</a></li>
                             </ul><!-- /.sub-menu -->
-                        </li>
-                        <li class="dropdown">
-                            <a href="#">Pages</a>
-                            <ul>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="why_choose_us.html">Why Choose Us</a></li>
-                                <li><a href="farmers.html">Farmers</a></li>
-                                <li><a href="gallery.html">Gallery</a></li>
-                            </ul><!-- /.sub-menu -->
-                        </li>
-                        <li class="dropdown">
-                            <a href="#">News</a>
-                            <ul>
-                                <li><a href="news.html">News</a></li>
-                                <li><a href="news_detail.html">News Details</a></li>
-                            </ul><!-- /.sub-menu -->
+                        </li> 
+                        <li>
+                            <a href="<?= LINK ?>curiosidades">Curiosidades</a>
                         </li>
                         <li>
-                            <a href="contact.html">Contact</a>
+                            <a href="<?= LINK ?>galeria">Galeria de Fotos</a>
+                        </li>
+                        <li>
+                            <a href="<?= LINK ?>safra">Notícias</a>
+                        </li>                    
+                        <li>
+                            <a href="contact.html">Contato</a>
                         </li>
                     </ul>
-                </div><!-- /.navbar-collapse -->
-
-                <div class="main-nav__right">
-                    <div class="icon_cart_box">
-                        <a href="cart.html">
-                            <span class="icon-shopping-cart"></span>
-                        </a>
-                    </div>
-                </div>
+                </div><!-- /.navbar-collapse -->                              
             </div>
         </nav>
     </header>
