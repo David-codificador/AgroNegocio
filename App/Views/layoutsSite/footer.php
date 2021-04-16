@@ -186,6 +186,7 @@
 <script src="<?= JSSITE ?>theme.js"></script>
 <?= $js ?>
 <?= $arquivoJS ?>
+<!-- END REVOLUTION SLIDER -->
 
 <script>
 <?php
