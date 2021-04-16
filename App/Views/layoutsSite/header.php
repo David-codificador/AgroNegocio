@@ -12,6 +12,10 @@
         <link rel="manifest" href="<?= IMAGEMSITE ?>favicons/site.webmanifest">
 
         <!-- plugin scripts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+            rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="<?= CSSSITE ?>animate.min.css">
         <link rel="stylesheet" href="<?= CSSSITE ?>bootstrap.min.css">
@@ -44,7 +48,7 @@
             <img src="<?= IMAGEMSITE ?>loader.png" class="preloader__image" alt="">
         </div><!-- /.preloader -->
         <div class="page-wrapper">
-            
+
             <input type="hidden" id="link" value="<?= LINK ?>" />
             <input type="hidden" id="recurso" value="<?= RECURSO ?>" /> 
 
