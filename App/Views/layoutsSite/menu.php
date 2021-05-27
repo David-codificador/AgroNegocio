@@ -1,7 +1,6 @@
 <div class="site-header__header-one-wrap">
 
     <div class="topbar-one">
-        <div class="topbar_bg" style="background-image: url(<?= IMAGEMSITE ?>shapes/header-bg.png)"></div>
         <div class="container">
             <div class="topbar-one__left">
                 <a href="mailto:needhelp@tripo.com"><span class="icon-message"></span>needhelp@agrikol.com</a>
@@ -14,10 +13,9 @@
             </div>
             <div class="topbar-one__right">
                 <div class="topbar-one__social cor_rede_social">
-                    <a href="#"><i class="fab fa-facebook-square"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-dribbble"></i></a>
                 </div>
             </div>
         </div>

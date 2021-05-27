@@ -1,17 +1,13 @@
 .corpo {
-<<<<<<< HEAD
-    background: #ffffff !important;
-     --thm-base: #10b844 !important;
-=======
-   
->>>>>>> parent of a0ddc3e (atualizacao)
+  background: #000 !important;
 }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 .main-nav__navigation-box > li > a:hover{
     color: #ffffff !important;
-<<<<<<< HEAD
+    --thm-base: #10b844 !important;
+}
+
+.main-nav__navigation-box > li > a{
+    color: #ffffff !important;
     --thm-base: #10b844 !important;
 }
 
@@ -25,11 +21,4 @@
 .cor_rede_social {
     --thm-primary: #d85252 !important;
 }
-=======
->>>>>>> parent of 02fdd16 (Update estilo.css)
-=======
->>>>>>> parent of 02fdd16 (Update estilo.css)
-=======
-      --thm-base: #10b844 !important;
-}
->>>>>>> parent of a0ddc3e (atualizacao)
+
