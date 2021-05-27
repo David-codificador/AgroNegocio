@@ -22,7 +22,7 @@
     </div>
 
     <header class="main-nav__header-one corpo">
-        <nav class="header-navigation stricky">
+        <nav class="header-navigation stricky corpo">
             <div class="container clearfix">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="main-nav__left">
