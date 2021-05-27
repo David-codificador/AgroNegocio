@@ -13,7 +13,7 @@
                 </a>
             </div>
             <div class="topbar-one__right">
-                <div class="topbar-one__social">
+                <div class="topbar-one__social cor_rede_social">
                     <a href="#"><i class="fab fa-facebook-square"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
@@ -40,7 +40,7 @@
                         </li>
                         <li class="dropdown cor_menu_link">
                             <a href="#">Produtos</a>
-                            <ul>
+                            <ul cor_menu_link>
                                 <li><a href="news.html">Melancia Style</a></li>
                                 <li><a href="news_detail.html">Melancia Manchester</a></li>
                             </ul><!-- /.sub-menu -->
