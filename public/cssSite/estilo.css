@@ -1,5 +1,6 @@
 .corpo {
   background: #881313 !important;
+   --thm-base: #10b844 !important;
 }
 .main-nav__navigation-box > li > a:hover{
     color: #ffffff !important;
