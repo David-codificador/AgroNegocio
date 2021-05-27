@@ -4,7 +4,7 @@
             <div class="banner-carousel-four owl-theme owl-carousel">
                 <!-- Slide Item -->
                 <div class="slide-item">
-                    <div class="image-layer" style="background-image: url(<?=IMAGEMSITE ?>main-slider/slide_v4_1.jpg);">
+                    <div class="image-layer" style="background-image: url(<?=IMAGEMSITE ?>main-slider/teste.png);">
                     </div>
                     <div class="auto-container">
                         <div class="content-box">
