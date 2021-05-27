@@ -1,7 +1,9 @@
 .corpo {
-   
+    background: #ffffff !important;
+     --thm-base: #10b844 !important;
 }
 
+<<<<<<< HEAD
 .main-nav__navigation-box > li > a:hover{
     color: #ffffff !important;
     --thm-base: #10b844 !important;
@@ -17,3 +19,5 @@
 .cor_rede_social {
     --thm-primary: #d85252 !important;
 }
+=======
+>>>>>>> parent of 02fdd16 (Update estilo.css)
