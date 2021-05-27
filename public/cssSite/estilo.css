@@ -1,12 +1,17 @@
 .corpo {
+<<<<<<< HEAD
     background: #ffffff !important;
      --thm-base: #10b844 !important;
+=======
+   
+>>>>>>> parent of a0ddc3e (atualizacao)
 }
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 .main-nav__navigation-box > li > a:hover{
     color: #ffffff !important;
+<<<<<<< HEAD
     --thm-base: #10b844 !important;
 }
 
@@ -24,3 +29,7 @@
 >>>>>>> parent of 02fdd16 (Update estilo.css)
 =======
 >>>>>>> parent of 02fdd16 (Update estilo.css)
+=======
+      --thm-base: #10b844 !important;
+}
+>>>>>>> parent of a0ddc3e (atualizacao)

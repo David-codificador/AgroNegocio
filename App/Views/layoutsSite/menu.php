@@ -3,9 +3,9 @@
     <div class="topbar-one">
         <div class="topbar_bg" style="background-image: url(<?= IMAGEMSITE ?>shapes/header-bg.png)"></div>
         <div class="container">
-            <div class="topbar-one__left cor_menu">
-                <a href="mailto:needhelp@tripo.com"><span class="icon-message"></span>dnatan008@gmail.com</a>
-                <a href="tel:666-999-0000"><span class="icon-phone-call"></span>(62) 0000-0000</a>
+            <div class="topbar-one__left">
+                <a href="mailto:needhelp@tripo.com"><span class="icon-message"></span>needhelp@agrikol.com</a>
+                <a href="tel:666-999-0000"><span class="icon-phone-call"></span>666 888 0000</a>
             </div>
             <div class="topbar-one__middle">
                 <a href="index.html" class="main-nav__logo">
@@ -38,7 +38,7 @@
                         <li>
                             <a href="<?= LINK ?>sobre">Sobre</a>
                         </li>
-                        <li class="dropdown cor_menu_link">
+                        <li class="dropdown">
                             <a href="#">Produtos</a>
                             <ul cor_menu_link>
                                 <li><a href="news.html">Melancia Style</a></li>
