@@ -2,6 +2,11 @@
     background: #239045  !important;
     --thm-base: #10b844 !important;
 }
+
+.banner-carousel-four .content-box .content {
+    padding: 0px 0px 120px !important;
+}
+
 .main-nav__navigation-box > li > a:hover{
     color: #ffffff !important;
     --thm-base: #780202 !important;
