@@ -2,7 +2,7 @@
 
     <div class="topbar-one">
         <div class="container">
-            <div class="topbar-one__left">
+            <div class="topbar-one__left ">
                 <a href="mailto:needhelp@tripo.com"><span class="icon-message"></span>natan_seabra@hotmail.com</a>
                 <a href="tel:666-999-0000"><span class="icon-phone-call"></span>(062) 9 9813 - 1151</a>
             </div>

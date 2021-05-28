@@ -1,6 +1,6 @@
 .corpo {
-  background: #239045  !important;
-   --thm-base: #10b844 !important;
+    background: #239045  !important;
+    --thm-base: #10b844 !important;
 }
 .main-nav__navigation-box > li > a:hover{
     color: #ffffff !important;
@@ -11,9 +11,20 @@
     color: #ffffff !important;
     --thm-base: #239045  !important;
 }
+.main-nav__main-navigation.two .main-nav__navigation-box > li {
+    padding: 13px 35px 15px !important;
+}
 
 .main-nav__header_two .stricked-menu {
-     background: #239045  !important;
+    background: #239045  !important;
+}
+
+.topbar-one__left a:hover {
+    color: #d85252 !important;
+}
+
+.topbar-one__social a {
+  background-color: #eaeaea !important;
 }
 
 .cor_menu {
