@@ -38,36 +38,22 @@
                             <li>
                                 <a href="<?= LINK ?>sobre">Sobre</a>
                             </li>
-                            <li class="dropdown">
-                                <a href="#">Produtos</a>
-                                <ul class="cor_menu_link">
-                                    <li><a href="news.html">Melancia Style</a></li>
-                                    <li><a href="news_detail.html">Melancia Manchester</a></li>
-                                </ul><!-- /.sub-menu -->
-                            </li> 
-                            <li class="dropdown">
-                                <a href="#">Pages</a>
-                                <ul>
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="why_choose_us.html">Why Choose Us</a></li>
-                                    <li><a href="farmers.html">Farmers</a></li>
-                                    <li><a href="gallery.html">Gallery</a></li>
-                                </ul><!-- /.sub-menu -->
-                            </li>
-                            <li class="dropdown">
-                                <a href="#">News</a>
-                                <ul>
-                                    <li><a href="news.html">News</a></li>
-                                    <li><a href="news_detail.html">News Details</a></li>
-                                </ul><!-- /.sub-menu -->
+                             <li>
+                                <a href="<?= LINK ?>produtos">Produtos</a>
                             </li>
                             <li>
-                                <a href="contact.html">Contact</a>
+                                <a href="#">Notícias</a>
+                            </li>
+                            <li>
+                                <a href="#">Galeria</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">Contato</a>
                             </li>
                         </ul>
                     </div>
 
-                   
+
 
                 </div>
             </div>

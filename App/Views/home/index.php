@@ -10,7 +10,7 @@
                         <div class="content-box">
                             <div class="content text-right">
                                 <div class="inner">
-                                    <h1><span>Organic</span> farming<br> is better for the<br> environment</h1>
+                                    <h1>Manga melhor<br> Preço<br> é aqui</h1>
                                     <div class="link-box">
                                         <a href="about.html" class="thm-btn">Discover More</a>
                                     </div>
@@ -20,41 +20,7 @@
                     </div>
                 </div>
 
-                <!-- Slide Item -->
-                <div class="slide-item">
-                    <div class="image-layer" style="background-image: url(<?=IMAGEMSITE ?>main-slider/slide_v4_2.jpg);">
-                    </div>
-                    <div class="auto-container">
-                        <div class="content-box">
-                            <div class="content text-right">
-                                <div class="inner">
-                                    <h1><span>Organic</span> farming<br> is better for the<br> environment</h1>
-                                    <div class="link-box">
-                                        <a href="about.html" class="thm-btn">Discover More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Slide Item -->
-                <div class="slide-item">
-                    <div class="image-layer" style="background-image: url(<?=IMAGEMSITE ?>main-slider/slide_v4_1.jpg);">
-                    </div>
-                    <div class="auto-container">
-                        <div class="content-box">
-                            <div class="content text-right">
-                                <div class="inner">
-                                    <h1><span>Organic</span> farming<br> is better for the<br> environment</h1>
-                                    <div class="link-box">
-                                        <a href="about.html" class="thm-btn">Discover More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
             </div>
         </section>
