@@ -67,17 +67,7 @@
                         </ul>
                     </div>
 
-                    <div class="main_nav_right_two float-right">
-                        <div class="icon_search_box">
-                            <a href="#" class="main-nav__search search-popup__toggler"><i
-                                    class="icon-magnifying-glass"></i></a>
-                        </div>
-                        <div class="icon_cart_box">
-                            <a href="cart.html">
-                                <span class="icon-shopping-cart"></span>
-                            </a>
-                        </div>
-                    </div>
+                   
 
                 </div>
             </div>
