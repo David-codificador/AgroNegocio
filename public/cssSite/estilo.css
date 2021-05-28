@@ -1,15 +1,19 @@
 .corpo {
-  background: #881313 !important;
+  background: #239045  !important;
    --thm-base: #10b844 !important;
 }
 .main-nav__navigation-box > li > a:hover{
     color: #ffffff !important;
-    --thm-base: #10b844 !important;
+    --thm-base: #780202 !important;
 }
 
 .main-nav__navigation-box > li > a{
     color: #ffffff !important;
-    --thm-base: #10b844 !important;
+    --thm-base: #239045  !important;
+}
+
+.main-nav__header_two .stricked-menu {
+     background: #239045  !important;
 }
 
 .cor_menu {
@@ -17,9 +21,12 @@
 }
 
 .cor_menu_link {
-    --thm-base: #10b844 !important;
+    --thm-base: #780202 !important;
 }
 .cor_rede_social {
     --thm-primary: #d85252 !important;
 }
 
+.main-nav__navigation-box > li ul > li > a:hover{
+    color: #ffffff !important;
+}
