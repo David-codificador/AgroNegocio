@@ -42,10 +42,10 @@
                                 <a href="<?= LINK ?>produtos">Produtos</a>
                             </li>
                             <li>
-                                <a href="#">Notícias</a>
+                                <a href="<?= LINK ?>noticias">Notícias</a>
                             </li>
                             <li>
-                                <a href="#">Galeria</a>
+                                <a href="<?= LINK ?>galeria">Galeria</a>
                             </li>
                             <li>
                                 <a href="contact.html">Contato</a>

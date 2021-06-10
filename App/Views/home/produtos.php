@@ -9,7 +9,7 @@
                                     <h3>organic<br>solutions</h3>
                                 </div>
                                 <div class="hover_box">
-                                    <a href="projects_detail.html"><span class="icon-left-arrow"></span></a>
+                                    <a href="<?= LINK ?>produtos/detalhesproduto"><span class="icon-left-arrow"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -22,7 +22,7 @@
                                     <h3>Harvest<br>Innovations</h3>
                                 </div>
                                 <div class="hover_box">
-                                    <a href="projects_detail.html"><span class="icon-left-arrow"></span></a>
+                                    <a href="<?= LINK ?>produtos/detalhesproduto"><span class="icon-left-arrow"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -35,7 +35,7 @@
                                     <h3>Agriculture<br>farming</h3>
                                 </div>
                                 <div class="hover_box">
-                                    <a href="projects_detail.html"><span class="icon-left-arrow"></span></a>
+                                    <a href="<?= LINK ?>produtos/detalhesproduto"><span class="icon-left-arrow"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -48,7 +48,7 @@
                                     <h3>the Farming<br>season</h3>
                                 </div>
                                 <div class="hover_box">
-                                    <a href="projects_detail.html"><span class="icon-left-arrow"></span></a>
+                                    <a href="<?= LINK ?>produtos/detalhesproduto"><span class="icon-left-arrow"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -61,7 +61,7 @@
                                     <h3>ecological<br>farming</h3>
                                 </div>
                                 <div class="hover_box">
-                                    <a href="projects_detail.html"><span class="icon-left-arrow"></span></a>
+                                    <a href="<?= LINK ?>produtos/detalhesproduto"><span class="icon-left-arrow"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -74,7 +74,7 @@
                                     <h3>Natural way<br>of agriculture</h3>
                                 </div>
                                 <div class="hover_box">
-                                    <a href="projects_detail.html"><span class="icon-left-arrow"></span></a>
+                                    <a href="<?= LINK ?>produtos/detalhesproduto"><span class="icon-left-arrow"></span></a>
                                 </div>
                             </div>
                         </div>
