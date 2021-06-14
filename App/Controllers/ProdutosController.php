@@ -19,6 +19,19 @@ class ProdutosController extends Controller {
 
         $this->render("home/detalhesproduto", "Detalhes do Produto", $css, $js, 3);
     }
+    
+    
+    public function cadastro() {
+        $this->validaAdministrador();
+        $this->nivelAcesso(4);
 
+        $css = '';
+        $js = '<script src="' . JSTEMPLATE . 'ckeditor/ckeditor.js"></script>';
+
+
+        $this->render("produtos/cadastro", "Cadastro de Produtos", $css, $js, 1);
+        Sessao::limpaFormulario();
+    }
+    
 
 }
