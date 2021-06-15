@@ -125,15 +125,15 @@ class ProdutosController extends Controller {
             $this->redirect('produtos/cadastro');
         }
     }
-    
-public function buscarInformacoes() {
+
+    public function buscarInformacoes() {
 
         $quantidade = $_POST['quantidade'];
         $p = $_POST['pagina'];
 
         //Formata o número inicial da páginação
         $pagina = $p * $quantidade - $quantidade;
-        
+
 
         $bo = new \App\Models\BO\ProdutosBO();
 
@@ -158,7 +158,35 @@ public function buscarInformacoes() {
         echo json_encode($retorno);
         exit();
     }
-    
-    
-    
+
+  public function VisualizarAjax() {
+        if (isset($_POST['id']) and is_numeric($_POST['id'])) {
+
+
+            $bo = new \App\Models\BO\ProdutosBO();
+
+            $item = $bo->selecionarVetor(\App\Models\Entidades\Produtos::TABELA['nome'], ['*'], 'id = ?', [$_POST['id']], '');
+
+            if ($item) {
+                $retorno = [
+                    'status' => 1,
+                    'msg' => 'Produto encontrado!',
+                    'retorno' => $item
+                ];
+            } else {
+                $retorno = [
+                    'status' => 0,
+                    'msg' => 'Produto não encontrado!'
+                ];
+            }
+        } else {
+            $retorno = [
+                'status' => 0,
+                'msg' => 'Parametros Incorretos!'
+            ];
+        }
+        echo json_encode($retorno);
+        exit();
+    }
+
 }
