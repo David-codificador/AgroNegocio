@@ -26,7 +26,7 @@ function buscarInfo(pagina) {
                     div += '<h3>' + dados.retorno[i].titulo + '</h3>';
                     div += '</div>';
                     div += '<div class="hover_box">';
-                    div += '<a onclick="detalheProduto(' + dados.retorno[i].id + ')"><span class="icon-left-arrow"></span></a>';
+                    div += '<a href=""><span class="icon-left-arrow"></span></a>';
                     div += '</div>';
                     div += '</div>';
                     div += '</div>';
