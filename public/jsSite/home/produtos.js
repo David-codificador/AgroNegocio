@@ -26,7 +26,7 @@ function buscarInfo(pagina) {
                     div += '<h3>' + dados.retorno[i].titulo + '</h3>';
                     div += '</div>';
                     div += '<div class="hover_box">';
-                    div += '<a href=""><span class="icon-left-arrow"></span></a>';
+                    div += '<a onclick="detalheProduto(' + dados.retorno[i].id + ')"><span class="icon-left-arrow"></span></a>';
                     div += '</div>';
                     div += '</div>';
                     div += '</div>';
@@ -75,8 +75,8 @@ function detalheProduto(id) {
                 div += '<h2>' + dados.retorno.titulo + ' </h2>';
                 div += '<p>' + dados.retorno.descricao + ' </p>';
 
-                $("#imagem_produto").html('<img src=' + $("#recurso").val() + "/imagemSite/produtos/" + dados.retorno[i].imagem + id + ' />');
-
+                $("#imagem_produto").html('<img src=' + $("#recurso").val() + "/imagemSite/produtos/" + dados.retorno[i].imagem +'/>');
+                
                 $("#resposta_ajax").html(div);
             } else {
                 $("#resposta_ajax").html('<h1>' + dados.msg + '</h1><a class="btn btn-primary" onclick="buscarInfo(' + id + ')">Tentar Novamente!</a>');
