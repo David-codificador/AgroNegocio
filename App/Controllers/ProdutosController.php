@@ -125,5 +125,40 @@ class ProdutosController extends Controller {
             $this->redirect('produtos/cadastro');
         }
     }
+    
+public function buscarInformacoes() {
 
+        $quantidade = $_POST['quantidade'];
+        $p = $_POST['pagina'];
+
+        //Formata o número inicial da páginação
+        $pagina = $p * $quantidade - $quantidade;
+        
+
+        $bo = new \App\Models\BO\ProdutosBO();
+
+        $tabela = \App\Models\Entidades\Produtos::TABELA['nome'];
+        //Execulta a listagem dos registros
+        $resultado = $bo->listarVetor($tabela, ["*"], $quantidade, $pagina, null, [], "");
+
+
+        if ($resultado) {
+            $retorno = [
+                'status' => 1,
+                'msg' => '',
+                'retorno' => $resultado
+            ];
+        } else {
+            $retorno = [
+                'status' => 0,
+                'msg' => 'Fim dos registros!'
+            ];
+        }
+
+        echo json_encode($retorno);
+        exit();
+    }
+    
+    
+    
 }

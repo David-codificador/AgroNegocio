@@ -1,5 +1,5 @@
 window.pagina = 0;
-window.quantidade = 10;
+window.quantidade = 8;
 
 function buscarInfo(pagina) {
     $.ajax({
@@ -8,14 +8,29 @@ function buscarInfo(pagina) {
         data: {pagina: pagina, quantidade: window.quantidade},
         url: $("#link").val() + 'produtos/buscarInformacoes',
         beforeSend: function () {
-            $("#carregando").html("<img src='" + $("#recurso").val() + "/imagem/loading.gif' id='carregando' class='gif-carregando' />");
+           // $("#carregando").html("<img src='" + $("#recurso").val() + "/imagemSite/loading.gif' id='carregando' class='gif-carregando' />");
         },
         success: function (dados) {
             $("#carregando").html('');
             if (dados.status == 1) {
-                var div = "";
+
+                var div = '';
+
                 for (var i = 0; dados.retorno.length > i; i++) {
-//colocar codigo aqui.
+                    div += '<div class="col-xl-3 col-lg-3">';
+                    div += '<div class="recent_project_single mrb-30">';
+                    div += '<div class="project_img_box">';
+                    div += '<img src=' + $("#recurso").val() + "/imagemSite/produtos/" + dados.retorno[i].imagem + ' />';
+                    div += '<div class="project_content">';
+                    div += '<h3>' + dados.retorno[i].titulo + '</h3>';
+                    div += '</div>';
+                    div += '<div class="hover_box">';
+                    div += '<a href="#"><span class="icon-left-arrow"></span></a>';
+                    div += '</div>';
+                    div += '</div>';
+                    div += '</div>';
+                    div += '</div>';
+              
                 }
                 $("#info_ajax").append(div);
 
@@ -41,3 +56,4 @@ function buscarInfo(pagina) {
 }
 
 buscarInfo(++window.pagina);
+
