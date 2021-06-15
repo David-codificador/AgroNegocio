@@ -31,7 +31,7 @@
                                         <div class="form-group">
                                             <label for="imagem">Imagem <sup class="color-danger">*</sup></label>
                                             <input type="file" class="form-control" id="imagem" name="imagem" required="">
-                                            <span>Imagem no tamanho de 500px largura 500px de altura</span>
+                                            <span>Imagem no tamanho de 370px largura 484px de altura</span>
                                         </div>
                                     </div>  
                           
