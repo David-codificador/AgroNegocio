@@ -5,15 +5,16 @@
             <div class="col-xl-8 col-lg-7">
                 <div class="project_detail_left_content">
                     <div class="harvest_innovations_detail">
-                        <div></div>
+                        <h2><?=$viewVar['item']['titulo']?></h2>
+                        <p><?=$viewVar['item']['descricao']?></p>
                     </div>
 
                 </div>
             </div>
             <div class="col-xl-4 col-lg-5">
                 <div class="project_information_box">
-                    <div class="project_detail_image">
-                        <div id="imagem_produto"></div>
+                        <div class="project_detail_image">
+                        <img src="<?= IMAGEMSITE ?>produtos/<?=$viewVar['item']['imagem']?>" alt="">
                     </div>
                 </div>
             </div>
@@ -23,8 +24,8 @@
 <section class="recent-project recent_project_detail">
     <div class="container">
         <div class="block-title text-center">
-            <p>explore projects</p>
-            <h3>our Recent projects</h3>
+            <p></p>
+            <h3>Mais Produtos</h3>
             <div class="leaf">
                 <img src="assets/images/resources/leaf.png" alt="">
             </div>

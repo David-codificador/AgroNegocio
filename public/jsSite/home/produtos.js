@@ -16,7 +16,7 @@ function buscarInfo(pagina) {
             if (dados.status == 1) {
 
                 var div = '';
-
+                              
                 for (var i = 0; dados.retorno.length > i; i++) {
                     div += '<div class="col-xl-3 col-lg-3">';
                     div += '<div class="recent_project_single mrb-30">';
@@ -26,7 +26,8 @@ function buscarInfo(pagina) {
                     div += '<h3>' + dados.retorno[i].titulo + '</h3>';
                     div += '</div>';
                     div += '<div class="hover_box">';
-                    div += '<a href="'+ $('#link').val() +'produtos/detalhesproduto/'+ dados.retorno[i].id +'"><span class="icon-left-arrow"></span></a>';
+                    //usar str_replace ?
+                    div += '<a href="'+ $('#link').val() +'produtos/detalhesproduto/'+ dados.retorno[i].id +'/'+dados.retorno[i].titulo+'.html"><span class="icon-left-arrow"></span></a>';
                     div += '</div>';
                     div += '</div>';
                     div += '</div>';
