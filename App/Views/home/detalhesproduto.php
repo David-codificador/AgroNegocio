@@ -1,5 +1,3 @@
-
-
 <section class="project_detail">
     <div class="container">
         <div class="row">
@@ -7,7 +5,7 @@
             <div class="col-xl-8 col-lg-7">
                 <div class="project_detail_left_content">
                     <div class="harvest_innovations_detail">
-                        <div id="resposta_ajax"></div>
+                        <div></div>
                     </div>
 
                 </div>

@@ -14,11 +14,28 @@ class ProdutosController extends Controller {
         $this->render("home/produtos", "Produtos", $css, $js, 3);
     }
 
-    public function detalhesproduto() {
+    public function detalhesproduto($parametro) {
         $css = null;
         $js = null;
-
-        $this->render("home/detalhesproduto", "Detalhes do Produto", $css, $js, 3);
+        
+        $id = $parametro[0];
+        $bo = new \App\Models\BO\ProdutosBO();
+        
+        $item = $bo->selecionarVetor(\App\Models\Entidades\Produtos::TABELA['nome'], ['*'], 'id = ?', [$id], '');
+        
+        
+        
+        if($item){
+            //listar de produtos e categorias.
+            
+            $this->setViewParam("item", $item);
+            $this->render("home/detalhesproduto", "Detalhes do Produto", $css, $js, 3);
+        } else {
+            Sessao::gravaMensagemSite("Produto não encontrado");
+            $this->redirect("produtos");
+        }
+        
+        
     }
 
     public function cadastro() {
@@ -155,38 +172,6 @@ class ProdutosController extends Controller {
             ];
         }
 
-        echo json_encode($retorno);
-        exit();
-    }
-
-    public function VisualizarAjax() {
-        $id = $_POST['id'];        
-        
-        if (is_numeric($id)) {
-
-
-            $bo = new \App\Models\BO\ProdutosBO();
-
-            $item = $bo->selecionarVetor(\App\Models\Entidades\Produtos::TABELA['nome'], ['*'], 'id = ?', [$_POST['id']], '');
-
-            if ($item) {
-                $retorno = [
-                    'status' => 1,
-                    'msg' => 'Produto encontrado!',
-                    'retorno' => $item
-                ];
-            } else {
-                $retorno = [
-                    'status' => 0,
-                    'msg' => 'Produto não encontrado!'
-                ];
-            }
-        } else {
-            $retorno = [
-                'status' => 0,
-                'msg' => 'Parametros Incorretos!'
-            ];
-        }
         echo json_encode($retorno);
         exit();
     }
