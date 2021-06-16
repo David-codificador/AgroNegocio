@@ -26,14 +26,17 @@ function buscarInfo(pagina) {
                     div += '<h3>' + dados.retorno[i].titulo + '</h3>';
                     div += '</div>';
                     div += '<div class="hover_box">';
-                    div += '<a href=""><span class="icon-left-arrow"></span></a>';
+                    div += '<a ><span class="icon-left-arrow"></span></a>';
                     div += '</div>';
                     div += '</div>';
                     div += '</div>';
                     div += '</div>';
                 }
+                  
+               
+               
                 $("#info_ajax").append(div);
-
+                         
                 $("#mais").show();
                 $("#fim_registros").html("");
             } else {
@@ -58,7 +61,7 @@ function buscarInfo(pagina) {
 buscarInfo(++window.pagina);
 
 function detalheProduto(id) {
-
+    
     $.ajax({
         type: 'post',
         dataType: 'json',
@@ -76,7 +79,7 @@ function detalheProduto(id) {
                 div += '<p>' + dados.retorno.descricao + ' </p>';
 
                 $("#imagem_produto").html('<img src=' + $("#recurso").val() + "/imagemSite/produtos/" + dados.retorno[i].imagem +'/>');
-                
+  
                 $("#resposta_ajax").html(div);
             } else {
                 $("#resposta_ajax").html('<h1>' + dados.msg + '</h1><a class="btn btn-primary" onclick="buscarInfo(' + id + ')">Tentar Novamente!</a>');
@@ -89,3 +92,4 @@ function detalheProduto(id) {
 
     });
 }
+detalheProduto();

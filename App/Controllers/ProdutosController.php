@@ -159,8 +159,10 @@ class ProdutosController extends Controller {
         exit();
     }
 
-  public function VisualizarAjax() {
-        if (isset($_POST['id']) and is_numeric($_POST['id'])) {
+    public function VisualizarAjax() {
+        $id = $_POST['id'];        
+        
+        if (is_numeric($id)) {
 
 
             $bo = new \App\Models\BO\ProdutosBO();
