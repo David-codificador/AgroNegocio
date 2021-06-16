@@ -27,7 +27,7 @@ function buscarInfo(pagina) {
                     div += '</div>';
                     div += '<div class="hover_box">';
                     //usar str_replace ?
-                    div += '<a href="'+ $('#link').val() +'produtos/detalhesproduto/'+ dados.retorno[i].id +'/'+dados.retorno[i].titulo+'.html"><span class="icon-left-arrow"></span></a>';
+                    div += '<a href="'+ $('#link').val() +'produtos/detalhesproduto/'+ dados.retorno[i].id +'"><span class="icon-left-arrow"></span></a>';
                     div += '</div>';
                     div += '</div>';
                     div += '</div>';
