@@ -17,25 +17,22 @@ class ProdutosController extends Controller {
     public function detalhesproduto($parametro) {
         $css = null;
         $js = null;
-        
+
         $id = $parametro[0];
         $bo = new \App\Models\BO\ProdutosBO();
-        
+
         $item = $bo->selecionarVetor(\App\Models\Entidades\Produtos::TABELA['nome'], ['*'], 'id = ?', [$id], '');
-        
-        
-        
-        if($item){
-            //listar de produtos e categorias.
-            
+        if ($item) {
+            //listar produtos.
+            $produtos = $bo->listarVetor(\App\Models\Entidades\Produtos::TABELA['nome'], ['*'], 3, null, null, [], "rand()");
+            $this->setViewParam('produtos', $produtos);
+
             $this->setViewParam("item", $item);
             $this->render("home/detalhesproduto", "Detalhes do Produto", $css, $js, 3);
         } else {
             Sessao::gravaMensagemSite("Produto não encontrado");
             $this->redirect("produtos");
         }
-        
-        
     }
 
     public function cadastro() {
