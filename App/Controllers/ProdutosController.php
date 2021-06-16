@@ -13,7 +13,41 @@ class ProdutosController extends Controller {
 
         $this->render("home/produtos", "Produtos", $css, $js, 3);
     }
+    
+        public function buscarInformacoes() {
 
+        $quantidade = $_POST['quantidade'];
+        $p = $_POST['pagina'];
+
+        //Formata o número inicial da páginação
+        $pagina = $p * $quantidade - $quantidade;
+
+
+        $bo = new \App\Models\BO\ProdutosBO();
+
+        $tabela = \App\Models\Entidades\Produtos::TABELA['nome'];
+        //Execulta a listagem dos registros
+        $resultado = $bo->listarVetor($tabela, ["*"], $quantidade, $pagina, null, [], "");
+
+
+        if ($resultado) {
+            $retorno = [
+                'status' => 1,
+                'msg' => '',
+                'retorno' => $resultado
+            ];
+        } else {
+            $retorno = [
+                'status' => 0,
+                'msg' => 'Fim dos registros!'
+            ];
+        }
+
+        echo json_encode($retorno);
+        exit();
+    }
+
+    
     public function detalhesproduto($parametro) {
         $css = null;
         $js = null;
@@ -136,41 +170,122 @@ class ProdutosController extends Controller {
             Sessao::limpaFormulario();
             Sessao::gravaMensagem("Sucesso", "Produto inserido!", 1);
 
-            $this->redirect('produtos/cadastro');
+            $this->redirect('produtos/listar');
         }
     }
+  
+    public function listar($parametro) {
+        $this->validaAdministrador();
+        $this->nivelAcesso(4);
 
-    public function buscarInformacoes() {
-
-        $quantidade = $_POST['quantidade'];
-        $p = $_POST['pagina'];
-
-        //Formata o número inicial da páginação
-        $pagina = $p * $quantidade - $quantidade;
-
+        $css = '';
+        $js = '<script src="' . JSTEMPLATE . 'bootstrap-confirmation/bootstrap-confirmation.min.js"></script>';
 
         $bo = new \App\Models\BO\ProdutosBO();
 
-        $tabela = \App\Models\Entidades\Produtos::TABELA['nome'];
-        //Execulta a listagem dos registros
-        $resultado = $bo->listarVetor($tabela, ["*"], $quantidade, $pagina, null, [], "");
+        if (!is_numeric($parametro[0])) {
+            $this->redirect('produtos/listar/1/' . $parametro[0]);
+        }
+        $p = (isset($parametro[0]) or is_numeric($parametro[0])) ? $parametro[0] : 1;
+        $busca = (isset($parametro[1])) ? $parametro[1] : null;
 
+        $quantidade = 10;
+        $pagina = $p * $quantidade - $quantidade;
 
-        if ($resultado) {
-            $retorno = [
-                'status' => 1,
-                'msg' => '',
-                'retorno' => $resultado
-            ];
-        } else {
-            $retorno = [
-                'status' => 0,
-                'msg' => 'Fim dos registros!'
-            ];
+        $condicao = "";
+        $valoresCondicao = [];
+
+        if ($busca) {
+            $condicao .= " titulo like '%?%'";
+            array_push($valoresCondicao, "$busca");
         }
 
-        echo json_encode($retorno);
-        exit();
-    }
+        $orderBy = "id desc";
 
+        $tabela = \App\Models\Entidades\Produtos::TABELA['nome'];
+
+        $resultado = $bo->listarVetor($tabela, ["*"], $quantidade, $pagina, $condicao, $valoresCondicao, $orderBy);
+
+        $this->setViewParam('produtos', $resultado);
+
+        $quanProdutos = $bo->selecionar($tabela, ["count(id) as id"], $condicao, $valoresCondicao, $orderBy);
+
+        $quanPaginas = ceil($quanProdutos->getId() / $quantidade);
+
+        if ($p > $quanPaginas and $p != 1) {
+            Sessao::gravaMensagem("Falha", "Página não encontrada", 2);
+            $this->redirect('produtos/listar');
+        }
+
+        if ($p < 5) {
+            $i = 0;
+            $fim = $quanPaginas < 5 ? $quanPaginas : 5;
+        } else {
+            if ($p < $quanPaginas - 2) {
+                $i = $p - 3;
+                $fim = $p + 2;
+            } else {
+                $i = $quanPaginas - 5;
+                $fim = $quanPaginas;
+            }
+        }
+
+        $paginacao = array(
+            'quanProdutos' => $quanProdutos->getId(),
+            'quanPaginas' => $quanPaginas,
+            'inicio' => $i,
+            'fim' => $fim,
+            'pagina' => $p,
+            'anterior' => $p - 1,
+            'proxima' => $p + 1,
+            'busca' => $busca
+        );
+
+        $this->setViewParam('paginacao', $paginacao);
+
+        if ($quanProdutos->getId() < 1) {
+            Sessao::gravaMensagem('', 'Nenhum registro encontrado!', 2);
+        }
+
+        $this->render('produtos/listar', "Listagem de Obras", $css, $js, 1);
+    }
+    
+     public function excluir($parametro) {
+        $this->validaAdministrador();
+        $this->nivelAcesso(4);
+
+        $id = $parametro[0];
+
+        if (is_numeric($id)) {
+            $bo = new \App\Models\BO\ProdutosBO();
+            $tabela = \App\Models\Entidades\Produtos::TABELA['nome'];
+
+            $resposta = $bo->excluir($tabela, "id = ?", [$id], 1);
+
+            if ($resposta) {
+                unlink('./public/imagemSite/produtos/' . $resposta['imagem']);
+
+                Sessao::gravaMensagem("Sucesso", "Produto Excluido", 1);
+
+                $info = [
+                    'tipo' => 3,
+                    'administrador' => Sessao::getAdministrador('id'),
+                    'campos' => "-",
+                    'tabela' => \App\Models\Entidades\Produtos::TABELA['descricao'],
+                    'descricao' => 'O ' . Sessao::getAdministrador('tipo_administrador_nome') . ' ' . Sessao::getAdministrador("nome") . ', efetuou a exclusão de um Podruto.'
+                ];
+
+                $this->inserirAuditoria($info);
+            } else {
+                if (!Sessao::existeMensagem()) {
+                    Sessao::gravaMensagem("Falha", "Produto não excluido", 2);
+                }
+            }
+        } else {
+            Sessao::gravaMensagem("Acesso incorreto", "As informações enviadas não conrrespondem ao esperado", 3);
+        }
+
+        $this->redirect('produtos/listar');
+    }
+    
 }
