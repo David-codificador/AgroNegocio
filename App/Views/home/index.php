@@ -34,7 +34,7 @@
                         <span class="icon-harvest"></span>
                     </div>
                     <div class="details_one_content">
-                        <h2>Organic Agriculture<br>Responsibility</h2>
+                        <h2>Frutas de Qualidade<br>é Aqui</h2>
                     </div>
                     <div class="details_one_count_box">
                         <h3>01</h3>
@@ -44,7 +44,7 @@
             <div class="col-xl-4 col-lg-4">
                 <div class="details_one_single wow fadeInUp" data-wow-delay="600ms">
                     <div class="details_one_icon">
-                        <span class="icon-farmer"></span>
+                        <span class="icon-customer-review"></span>
                     </div>
                     <div class="details_one_content">
                         <h2>Innovative economy<br>solutions</h2>
@@ -57,7 +57,7 @@
             <div class="col-xl-4 col-lg-4">
                 <div class="details_one_single wow fadeInUp" data-wow-delay="900ms">
                     <div class="details_one_icon">
-                        <span class="icon-tractor"></span>
+                        <span class="icon-calendar"></span>
                     </div>
                     <div class="details_one_content">
                         <h2>Better Live stock<br>Farming</h2>
