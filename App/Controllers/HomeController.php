@@ -10,6 +10,11 @@ class HomeController extends Controller {
         $css = null;
         $js = null;
 
+        $bo = new \App\Models\BO\BannerBO();
+
+        $banner = $bo->listarVetor(\App\Models\Entidades\Banner::TABELA['nome'], ['*'], null, null, "", [], 'rand()');
+        $this->setViewParam('banner', $banner);
+
         $this->render("home/index", "Início", $css, $js, 3);
     }
 
