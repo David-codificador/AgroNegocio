@@ -64,9 +64,8 @@
                                                         <span class="caret"></span>
                                                     </button>
                                                     <ul class="dropdown-menu btn_listar">
-                                                        <li><a href="<?= LINK ?>produtos/visualizar/<?= $item['id'] ?>"><i class="fa fa-search"></i> Visualizar</a></li>
                                                         <li><a href="<?= LINK ?>produtos/editar/<?= $item['id'] ?>"><i class="fa fa-edit"></i>Editar</a></li>
-                                                         <li><a href="<?= LINK ?>produtos/excluir/<?= $item['id'] ?>/0" data-toggle="confirmation" data-placement="top" data-btn-ok-label="Excluir" data-btn-ok-icon="glyphicon glyphicon-share-alt" data-btn-ok-class="btn-success" data-btn-cancel-label="Cancelar" data-btn-cancel-icon="glyphicon glyphicon-ban-circle" data-btn-cancel-class="btn-danger" data-title="Confirmação" data-content="Apagar <?= $item['titulo'] ?>?"><i class="fa fa-trash-o color-danger"></i> Excluir</a></li>
+                                                        <li><a href="<?= LINK ?>produtos/excluir/<?= $item['id'] ?>/0" data-toggle="confirmation" data-placement="top" data-btn-ok-label="Excluir" data-btn-ok-icon="glyphicon glyphicon-share-alt" data-btn-ok-class="btn-success" data-btn-cancel-label="Cancelar" data-btn-cancel-icon="glyphicon glyphicon-ban-circle" data-btn-cancel-class="btn-danger" data-title="Confirmação" data-content="Apagar <?= $item['titulo'] ?>?"><i class="fa fa-trash-o color-danger"></i> Excluir</a></li>
 
                                                     </ul>
                                                 </div></td>
