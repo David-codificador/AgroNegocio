@@ -48,7 +48,7 @@
                                 <a href="<?= LINK ?>galeria">Galeria</a>
                             </li>
                             <li>
-                                <a href="contact.html">Contato</a>
+                                <a href="<?= LINK ?>contato">Contato</a>
                             </li>
                         </ul>
                     </div>
