@@ -536,7 +536,7 @@ class AdministradorController extends Controller {
             $resultado = $bo->editar(\App\Models\Entidades\Administrador::TABELA['nome'], $dados, "id = ?", [$id], 1, \App\Models\Entidades\Administrador::CAMPOSINFO);
 
             if ($resultado == FALSE) {
-                if (!Sessao::existeMensagem()) {
+                if (!Sessao::existeMensagem() or $resultado == FALSE) {
                     Sessao::gravaMensagem("Administrador sem edição", $vetor['nome'], 2);
                 }
 
