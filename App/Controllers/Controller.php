@@ -64,8 +64,8 @@ abstract class Controller {
         }
     }
 
-    public function redirect($view) {
-        header('Location: ' . LINK . $view);
+      public function redirect($view) {
+        echo "<script> window.location.href = '". LINK . $view . "'; </script>";
         exit;
     }
 

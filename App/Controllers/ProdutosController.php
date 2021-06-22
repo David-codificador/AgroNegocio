@@ -182,9 +182,11 @@ class ProdutosController extends Controller {
 
         $bo = new \App\Models\BO\ProdutosBO();
 
-        if (!is_numeric($parametro[0])) {
-            $this->redirect('produtos/listar/1/' . $parametro[0]);
+        if (!isset($parametro[0]) or!is_numeric($parametro[0])) {
+            //Caso não seja o usuário é redireciona para a tela de listagem na página 1 com os parametros de busca caso exista
+            $this->redirect('produtos/listar/1/' . (isset($parametro[0]) ? $parametro[0] : ''));
         }
+
         $p = (isset($parametro[0]) or is_numeric($parametro[0])) ? $parametro[0] : 1;
         $busca = (isset($parametro[1])) ? $parametro[1] : null;
 
@@ -388,7 +390,7 @@ class ProdutosController extends Controller {
 
         $this->redirect('produtos/listar');
     }
-    
+
     public function salvar() {
         $this->validaAdministrador();
         $this->nivelAcesso(4);
@@ -421,7 +423,7 @@ class ProdutosController extends Controller {
 
                 $this->redirect('produtos/listar');
             } else {
-                
+
                 $x = '';
 
                 foreach ($dados as $indice => $value) {
@@ -454,6 +456,5 @@ class ProdutosController extends Controller {
 
         $this->redirect('produtos/listar');
     }
-
 
 }

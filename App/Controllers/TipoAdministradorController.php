@@ -129,8 +129,9 @@ class TipoAdministradorController extends Controller {
 
         $bo = new \App\Models\BO\TipoAdministradorBO();
 
-        if (!is_numeric($parametro[0])) {
-            $this->redirect('tipoAdministrador/listar/1/' . $parametro[0]);
+        if (!isset($parametro[0]) or!is_numeric($parametro[0])) {
+            //Caso não seja o usuário é redireciona para a tela de listagem na página 1 com os parametros de busca caso exista
+            $this->redirect('tipoAdministrador/listar/1/' . (isset($parametro[0]) ? $parametro[0] : ''));
         }
 
         $p = (isset($parametro[0]) or is_numeric($parametro[0])) ? $parametro[0] : 1;
@@ -327,26 +328,26 @@ class TipoAdministradorController extends Controller {
     public function salvar() {
         $this->validaAdministrador();
         $this->nivelAcesso(1);
-        
+
         $id = $_POST['id'];
-        
-        if(is_numeric($id)){
+
+        if (is_numeric($id)) {
             $bo = new \App\Models\BO\TipoAdministradorBO();
             $permissaoBO = new \App\Models\BO\PermissaoBO();
-            
+
             $vetor = $_POST;
             $dados = array();
             $campus = \App\Models\Entidades\TipoAdministrador::CAMPOS;
-            
-            if($vetor['status'] == "on"){
+
+            if ($vetor['status'] == "on") {
                 $vetor['status'] = 1;
             } else {
                 $vetor['status'] = 2;
             }
-            
-            foreach ( $vetor as $indice => $valor){
-                if(in_array($indice, $campus)){
-                    if($vetor[$indice] == ''){
+
+            foreach ($vetor as $indice => $valor) {
+                if (in_array($indice, $campus)) {
+                    if ($vetor[$indice] == '') {
                         $dados[$indice] == "null";
                     } else {
                         $dados[$indice] = $vetor[$indice];
@@ -354,8 +355,8 @@ class TipoAdministradorController extends Controller {
                 }
             }
             $resultadoUpdate = $bo->editar(\App\Models\Entidades\TipoAdministrador::TABELA['nome'], $dados, "id = ?", [$id], 1, \App\Models\Entidades\TipoAdministrador::CAMPOSINFO);
-            
-            $tabela= \App\Models\Entidades\Permissao::TABELA['nome'] . " pa inner join " . \App\Models\Entidades\TipoPermissao::TABELA['nome'] . " tap on tap.permissao_id = pa.id";
+
+            $tabela = \App\Models\Entidades\Permissao::TABELA['nome'] . " pa inner join " . \App\Models\Entidades\TipoPermissao::TABELA['nome'] . " tap on tap.permissao_id = pa.id";
             $permissoes = $permissaoBO->listarVetor($tabela, ['id', 'permissao'], null, null, "tap.tipo_administrador_id = ?", [$id], "pa.id");
             $todasPermissoes = $permissaoBO->listarVetor(\App\Models\Entidades\Permissao::TABELA['nome'], ['id', 'permissao'], null, null, "", [], "id");
 
@@ -363,17 +364,17 @@ class TipoAdministradorController extends Controller {
             $arrayNovo = array();
             $arrayPermissoes = array();
 
-            foreach ($permissoes as $item){
+            foreach ($permissoes as $item) {
                 array_push($arrayAtual, $item['id']);
             }
 
-            if(isset($_POST['permissao'])){
-                foreach ($_POST['permissao'] as $item){
+            if (isset($_POST['permissao'])) {
+                foreach ($_POST['permissao'] as $item) {
                     array_push($arrayNovo, $item);
                 }
             }
 
-            foreach ($todasPermissoes as $item){
+            foreach ($todasPermissoes as $item) {
                 $arrayPermissoes[$item['id']] = $item;
             }
 
@@ -381,19 +382,19 @@ class TipoAdministradorController extends Controller {
             $inserir = array_diff($arrayNovo, $arrayAtual);
 
             $y = "";
-            if($apagar or $inserir){
-                if($apagar){
+            if ($apagar or $inserir) {
+                if ($apagar) {
                     $y .= "<br>Permissões negadas:<br>";
 
-                    foreach ($apagar as $item){
+                    foreach ($apagar as $item) {
                         $permissaoBO->excluir(\App\Models\Entidades\TipoPermissao::TABELA['nome'], "tipo_administrador_id = ? and permissao_id = ?", [$id, $item], 1, true);
                         $y .= $arrayPermissoes[$item]["permissao"] . "<br>";
                     }
                 }
 
-                if($inserir){
+                if ($inserir) {
                     $y .= "<br>Permissões concedidas:<br>";
-                    foreach ($inserir as $item){
+                    foreach ($inserir as $item) {
                         $dados2 = [
                             'tipo_administrador_id' => $id,
                             'permissao_id' => $item
@@ -409,18 +410,18 @@ class TipoAdministradorController extends Controller {
                 $resultadoPermissao = False;
             }
 
-            if(($resultadoUpdate == FALSE and $resultadoPermissao == FALSE)){
-                if(!Sessao::existeMensagem()){
+            if (($resultadoUpdate == FALSE and $resultadoPermissao == FALSE)) {
+                if (!Sessao::existeMensagem()) {
                     Sessao::gravaMensagem($vetor['tipo'], "Tipo de administrador sem edição", 2);
                 }
-            }else{
-                
+            } else {
+
                 $x = '';
-                if($resultadoUpdate){
+                if ($resultadoUpdate) {
                     $dados['status'] = $this->status($dados['status']);
                     $resultadoUpdate['status'] = $this->status($resultadoUpdate['status']);
                     foreach ($dados as $indice => $value) {
-                        if($resultadoUpdate[$indice] != $value){
+                        if ($resultadoUpdate[$indice] != $value) {
                             $x .= "campo " . \App\Models\Entidades\TipoAdministrador::CAMPOSINFO[$indice]['descricao'] . ' editado de : "' . $resultadoUpdate[$indice] . '" para "' . $value . '"<br>';
                         }
                     }
@@ -429,29 +430,28 @@ class TipoAdministradorController extends Controller {
                 $info = [
                     'tipo' => 2,
                     'administrador' => Sessao::getAdministrador('id'),
-                    'campos' => $x.$y,
+                    'campos' => $x . $y,
                     'tabela' => \App\Models\Entidades\TipoAdministrador::TABELA['descricao'],
-                    'descricao' => 'O '.Sessao::getAdministrador('tipo_administrador_nome').' '. Sessao::getAdministrador("nome") .', efetuou a edição da tipo de administrador "'. $vetor['tipo'] .'".'
+                    'descricao' => 'O ' . Sessao::getAdministrador('tipo_administrador_nome') . ' ' . Sessao::getAdministrador("nome") . ', efetuou a edição da tipo de administrador "' . $vetor['tipo'] . '".'
                 ];
 
                 $this->inserirAuditoria($info);
 
-                if($id == Sessao::getAdministrador("tipo_administrador_id")){
+                if ($id == Sessao::getAdministrador("tipo_administrador_id")) {
                     $this->redirect('administrador/sair');
                 }
 
                 Sessao::gravaMensagem("Sucesso", "TipoAdministrador " . $vetor['tipo'] . ", editado", 1);
 
-                $this->redirect('tipoAdministrador/visualizar/'. $id);
+                $this->redirect('tipoAdministrador/visualizar/' . $id);
             }
 
-            $this->redirect('tipoAdministrador/editar/'. $id);
+            $this->redirect('tipoAdministrador/editar/' . $id);
         } else {
             Sessao::gravaMensagem("Acesso incorreto", "As informações enviadas não conrrespondem ao esperado", 3);
         }
 
         $this->redirect('tipoAdministrador/listar');
-        }
     }
 
-
+}

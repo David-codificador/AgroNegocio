@@ -67,9 +67,11 @@ class ContatoController extends Controller {
 
         $bo = new \App\Models\BO\ContatoBO();
 
-        if (!is_numeric($parametro[0])) {
-            $this->redirect('contato/listar/1/' . $parametro[0]);
+        if (!isset($parametro[0]) or!is_numeric($parametro[0])) {
+            //Caso não seja o usuário é redireciona para a tela de listagem na página 1 com os parametros de busca caso exista
+            $this->redirect('contato/listar/1/' . (isset($parametro[0]) ? $parametro[0] : ''));
         }
+
         $p = (isset($parametro[0]) or is_numeric($parametro[0])) ? $parametro[0] : 1;
         $busca = (isset($parametro[1])) ? $parametro[1] : null;
 
@@ -402,21 +404,21 @@ class ContatoController extends Controller {
                      <div class='corpo'>
                         <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStacH0xkaYdiC9AKpSsT4CQPfA4w1oVIikOg&usqp=CAU'/>
                         <h1>Contato recebido pelo site</h1>
-                        <h2>Nome: ".$dados['nome']."</h2>
-                        <h2>Telefone: ".$dados['telefone']."</h2>
-                        <h2>Email: ".$dados['email']."</h2>
-                        <h2>Assunto: ".$dados['assunto']."</h2>
-                        <p>Contato enviado em ".date('d/m/Y')." as ".date('H:i:s')."</p>
+                        <h2>Nome: " . $dados['nome'] . "</h2>
+                        <h2>Telefone: " . $dados['telefone'] . "</h2>
+                        <h2>Email: " . $dados['email'] . "</h2>
+                        <h2>Assunto: " . $dados['assunto'] . "</h2>
+                        <p>Contato enviado em " . date('d/m/Y') . " as " . date('H:i:s') . "</p>
                      </div>
                 </html>
      
             ";
-            
+
             $assunto = "Contato pelo Site";
             $destino = "maxuel@maxxconstrutora.com.br";
             $usuario = $dados['nome'];
             $emailEnvio = $dados['email'];
-            
+
             $this->enviar_email($corpoEmail, $assunto, $destino, $usuario, $emailEnvio);
 
             $x = '';

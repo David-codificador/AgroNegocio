@@ -41,7 +41,7 @@ class Sessao {
     }
 
     public static function retornaMensagem() {
-        return ($_SESSION['mensagem']) ? $_SESSION['mensagem'] : '';
+        return isset($_SESSION['mensagem']) ? $_SESSION['mensagem'] : '';
     }
 
     public static function retornaTitulo() {

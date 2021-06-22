@@ -135,9 +135,12 @@ class NoticiasController extends Controller {
 
         $bo = new \App\Models\BO\NoticiasBO();
 
-        if (!is_numeric($parametro[0])) {
-            $this->redirect('noticias/listar/1/' . $parametro[0]);
+        if (!isset($parametro[0]) or!is_numeric($parametro[0])) {
+            //Caso não seja o usuário é redireciona para a tela de listagem na página 1 com os parametros de busca caso exista
+            $this->redirect('noticias/listar/1/' . (isset($parametro[0]) ? $parametro[0] : ''));
         }
+
+
         $p = (isset($parametro[0]) or is_numeric($parametro[0])) ? $parametro[0] : 1;
         $busca = (isset($parametro[1])) ? $parametro[1] : null;
 
@@ -341,8 +344,8 @@ class NoticiasController extends Controller {
 
         $this->redirect('noticias/listar');
     }
-    
-     public function salvar() {
+
+    public function salvar() {
         $this->validaAdministrador();
         $this->nivelAcesso(6);
         $id = $_POST['noticias'];
@@ -374,7 +377,7 @@ class NoticiasController extends Controller {
 
                 $this->redirect('noticias/listar');
             } else {
-                
+
                 $x = '';
 
                 foreach ($dados as $indice => $value) {
