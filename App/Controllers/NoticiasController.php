@@ -369,7 +369,7 @@ class NoticiasController extends Controller {
             //Verificar o porque de não entrar nesse if 
             if (Sessao::existeMensagem() or $resultado == FALSE) {
                 if (!Sessao::existeMensagem()) {
-                    Sessao::gravaMensagem($vetor['descricao'], "Notícia sem edição", 2);
+                    Sessao::gravaMensagem($vetor['titulo'], "Notícia sem edição", 2);
                 }
 
                 $this->redirect('noticias/listar');
