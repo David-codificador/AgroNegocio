@@ -416,7 +416,7 @@ class ProdutosController extends Controller {
 
             if (Sessao::existeMensagem() or $resultado == FALSE) {
                 if (!Sessao::existeMensagem()) {
-                    Sessao::gravaMensagem($vetor['descricao'], "Produto sem edição", 2);
+                    Sessao::gravaMensagem($vetor['titulo'], "Produto sem edição", 2);
                 }
 
                 $this->redirect('produtos/listar');
