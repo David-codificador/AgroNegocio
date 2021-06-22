@@ -246,7 +246,7 @@ class ProdutosController extends Controller {
             Sessao::gravaMensagem('', 'Nenhum registro encontrado!', 2);
         }
 
-        $this->render('produtos/listar', "Listagem de Obras", $css, $js, 1);
+        $this->render('produtos/listar', "Listagem de Produtos", $css, $js, 1);
     }
 
     public function excluir($parametro) {
@@ -386,7 +386,7 @@ class ProdutosController extends Controller {
             Sessao::gravaMensagem("Acesso incorreto", "As informações enviadas não conrrespondem ao esperado", 3);
         }
 
-        $this->redirect('artigo/listar');
+        $this->redirect('produtos/listar');
     }
     
     public function salvar() {
