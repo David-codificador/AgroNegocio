@@ -54,7 +54,7 @@
                                     </div>
                                     <div class="sidebar__post-content">
                                         <h3>
-                                            <a onclick="ver(<?= $item['id'] ?>)"><?= $item['titulo'] ?></a>
+                                            <a onclick="ver(<?= $item['id'] ?>)" style="cursor: pointer !important;"><?= $item['titulo'] ?></a>
                                         </h3>
                                     </div>
                                 </li>
@@ -65,6 +65,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="have_questions_btn">
+            <a onclick="fechar()" class="thm-btn">Voltar</a>
         </div>
     </div>
 </section>

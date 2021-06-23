@@ -16,7 +16,7 @@ class NoticiasController extends Controller {
         $condicao = "";
         $valorCondicao = [];
 
-        $noticias = $bo->listarVetor(\App\Models\Entidades\Noticias::TABELA['nome'], ["*"], 5, null, $condicao, $valorCondicao);
+        $noticias = $bo->listarVetor(\App\Models\Entidades\Noticias::TABELA['nome'], ["*"], 5, null, $condicao, $valorCondicao, "rand()");
         $this->setViewParam('noticias', $noticias);
 
 
