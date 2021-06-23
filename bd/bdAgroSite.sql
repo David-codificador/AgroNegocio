@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 22-Jun-2021 às 19:46
+-- Tempo de geração: 23-Jun-2021 às 02:42
 -- Versão do servidor: 10.4.17-MariaDB
 -- versão do PHP: 8.0.0
 
@@ -47,7 +47,7 @@ CREATE TABLE `administrador` (
 --
 
 INSERT INTO `administrador` (`id`, `nome`, `foto`, `telefone`, `email`, `usuario`, `senha`, `status`, `cadastro`, `token`, `expiracao_token`, `tipo_administrador_id`) VALUES
-(1, 'David', NULL, '62998131151', 'natan_seabra@hotmail.com', 'admin', '123', 1, '2021-04-13 16:10:55', NULL, NULL, 1);
+(1, 'David', NULL, '(62) 9 9813-1151', 'natan_seabra@hotmail.com', 'admin', '123', 1, '2021-04-13 16:10:55', NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -173,7 +173,54 @@ INSERT INTO `auditoria` (`id`, `tipo`, `administrador`, `tabela`, `campos`, `des
 (100, 2, 1, 'Banner', 'campo imagem editado de:<br><img src=\"http://localhost/AgroNegocio//public/imagemSite/banner/17_06_2021_03_20_53_138.png\" /><br>para:<br><img src=\"http://localhost/AgroNegocio//public/imagemSite/banner/17_06_2021_03_22_26_136.png\" /><br>', 'O  David, efetuou a edição da imagem do banner ', '2021-06-17 15:22:27', '::1'),
 (101, 2, 1, 'Banner', 'campo imagem editado de:<br><img src=\"http://localhost/AgroNegocio//public/imagemSite/banner/17_06_2021_03_22_26_136.png\" /><br>para:<br><img src=\"http://localhost/AgroNegocio//public/imagemSite/banner/17_06_2021_03_22_47_169.png\" /><br>', 'O  David, efetuou a edição da imagem do banner ', '2021-06-17 15:22:48', '::1'),
 (102, 2, 1, 'Banner', 'campo imagem editado de:<br><img src=\"http://localhost/AgroNegocio//public/imagemSite/banner/17_06_2021_03_22_47_169.png\" /><br>para:<br><img src=\"http://localhost/AgroNegocio//public/imagemSite/banner/17_06_2021_03_27_34_214.png\" /><br>', 'O  David, efetuou a edição da imagem do banner ', '2021-06-17 15:27:35', '::1'),
-(103, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-17 15:32:35', '::1');
+(103, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-17 15:32:35', '::1'),
+(104, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-06-22 15:00:00', '::1'),
+(105, 2, 1, 'Tipo de administrador', '<br>Permissões concedidas:<br>Gerenciar Noticias<br>', 'O  David, efetuou a edição da tipo de administrador \"Administrador\".', '2021-06-22 15:00:12', '::1'),
+(106, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-22 15:00:12', '::1'),
+(107, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-06-22 15:00:13', '::1'),
+(108, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-06-22 15:07:47', '::1'),
+(109, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-22 15:13:34', '::1'),
+(110, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-06-22 15:13:41', '::1'),
+(111, 2, 1, 'Tipo de administrador', '<br>Permissões negadas:<br>Gerenciar Noticias<br>', 'O  David, efetuou a edição da tipo de administrador \"Administrador\".', '2021-06-22 15:17:28', '::1'),
+(112, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-22 15:17:28', '::1'),
+(113, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-06-22 15:17:29', '::1'),
+(114, 2, 1, 'Tipo de administrador', '<br>Permissões concedidas:<br>Gerenciar Noticias<br>', 'O  David, efetuou a edição da tipo de administrador \"Administrador\".', '2021-06-22 15:17:37', '::1'),
+(115, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-22 15:17:37', '::1'),
+(116, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-06-22 15:17:38', '::1'),
+(117, 2, 1, 'Tipo de administrador', '<br>Permissões concedidas:<br>Gerenciar Noticias<br>', 'O  David, efetuou a edição da tipo de administrador \"Administrador\".', '2021-06-22 15:19:12', '::1'),
+(118, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-22 15:19:12', '::1'),
+(119, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-06-22 15:19:14', '::1'),
+(120, 1, 1, 'Noticias', 'campo Titulo: teste<br>campo Descricao: <p>rwa</p>\r\n<br><img src=\"http://localhost/AgroNegocio//public/imagemSite/noticias/22_06_2021_03_20_28_825.png\" style=\"width: 100%\">', 'O  David, efetuou o cadastro de um nova Notícia.', '2021-06-22 15:20:28', '::1'),
+(121, 1, 1, 'Noticias', 'campo Titulo: teste<br>campo Descricao: <p>teste</p>\r\n<br><img src=\"http://localhost/AgroNegocio//public/imagemSite/noticias/22_06_2021_03_23_39_913.jpg\" style=\"width: 100%\">', 'O  David, efetuou o cadastro de um nova Notícia.', '2021-06-22 15:23:39', '::1'),
+(122, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-22 15:29:02', '::1'),
+(123, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-06-22 15:30:16', '::1'),
+(124, 1, 1, 'Noticias', 'campo Titulo: teste<br>campo Descricao: <p>teste</p>\r\n<br><img src=\"http://localhost/AgroNegocio//public/imagemSite/noticias/22_06_2021_03_32_21_748.jpg\" style=\"width: 100%\">', 'O  David, efetuou o cadastro de um nova Notícia.', '2021-06-22 15:32:21', '::1'),
+(125, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-22 15:40:50', '::1'),
+(126, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-06-22 15:44:39', '::1'),
+(127, 3, 1, 'Noticias', '-', 'O  David, efetuou a exclusão de uma Notícia.', '2021-06-22 15:44:45', '::1'),
+(128, 3, 1, 'Noticias', '-', 'O  David, efetuou a exclusão de uma Notícia.', '2021-06-22 15:48:03', '::1'),
+(129, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-22 15:53:13', '::1'),
+(130, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-06-22 15:53:32', '::1'),
+(131, 1, 1, 'Noticias', 'campo Titulo: teste<br>campo Descricao: <p>teste</p>\r\n<br><img src=\"http://localhost/AgroNegocio//public/imagemSite/noticias/22_06_2021_03_53_44_339.jpg\" style=\"width: 100%\">', 'O  David, efetuou o cadastro de um nova Notícia.', '2021-06-22 15:53:44', '::1'),
+(132, 2, 1, 'Noticias', 'campo imagem editado de:<br><img src=\"http://localhost/AgroNegocio//public/imagemSite/noticias/22_06_2021_03_53_44_339.jpg\" /><br>para:<br><img src=\"http://localhost/AgroNegocio//public/imagemSite/noticias/22_06_2021_04_10_58_286.jpeg\" /><br>', 'O  David, efetuou a edição da imagem da Noticia teste', '2021-06-22 16:10:58', '::1'),
+(133, 2, 1, 'Noticias', 'campo Titulo editado de: \"teste\" para \"teste 1\"<br>campo Descricao editado de: \"<p>teste</p>\r\n\" para \"<p>teste fasa</p>\r\n\"<br>', 'O  David, efetuou a edição das informações de uma Notícia', '2021-06-22 16:15:08', '::1'),
+(134, 2, 1, 'Noticias', 'campo Descricao editado de: \"<p>teste fasa</p>\r\n\" para \"<p><strong>teste fasa</strong></p>\r\n\"<br>', 'O  David, efetuou a edição das informações de uma Notícia', '2021-06-22 16:18:41', '::1'),
+(135, 2, 1, 'Administrador', 'campo telefone editado de: \"62998131151\" para \"(62) 9 9813-1151\"<br>', 'O Administrador David, efetuou a edição da administrador \"David\".', '2021-06-22 16:21:15', '::1'),
+(136, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-22 16:21:15', '::1'),
+(137, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-06-22 16:21:16', '::1'),
+(138, 2, 1, 'Tipo de administrador', '<br>Permissões negadas:<br>Gerenciar Produtos<br>Gerenciar Noticias<br>', 'O  David, efetuou a edição da tipo de administrador \"Administrador\".', '2021-06-22 16:25:33', '::1'),
+(139, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-22 16:25:33', '::1'),
+(140, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-06-22 16:25:35', '::1'),
+(141, 2, 1, 'Tipo de administrador', '<br>Permissões concedidas:<br>Gerenciar Noticias<br>Gerenciar Produtos<br>', 'O  David, efetuou a edição da tipo de administrador \"Administrador\".', '2021-06-22 16:26:03', '::1'),
+(142, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-22 16:26:03', '::1'),
+(143, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-06-22 16:26:05', '::1'),
+(144, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-22 16:31:12', '::1'),
+(145, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-06-22 16:40:18', '::1'),
+(146, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-22 16:49:18', '::1'),
+(147, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-06-22 16:49:39', '::1'),
+(148, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-22 16:53:22', '::1'),
+(149, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-06-22 16:56:54', '::1'),
+(150, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-22 16:57:29', '::1');
 
 -- --------------------------------------------------------
 
@@ -226,6 +273,13 @@ CREATE TABLE `noticias` (
   `administrador_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Extraindo dados da tabela `noticias`
+--
+
+INSERT INTO `noticias` (`id`, `imagem`, `titulo`, `texto`, `data_publicacao`, `administrador_id`) VALUES
+(4, '22_06_2021_04_10_58_286.jpeg', 'teste 1', '<p><strong>teste fasa</strong></p>\r\n', '2021-06-22 15:53:44', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -246,9 +300,10 @@ CREATE TABLE `permissao` (
 INSERT INTO `permissao` (`id`, `permissao`, `nivel`, `status`) VALUES
 (1, 'Gerenciar Tipo de Administrador', 1, 1),
 (2, 'Gerenciar Administradores', 2, 1),
-(3, 'Auditoria', 3, 1),
-(4, 'Produtos', 4, 1),
-(5, 'Banner', 5, 1);
+(3, 'Gerenciar Auditoria', 3, 1),
+(4, 'Gerenciar Produtos', 4, 1),
+(5, 'Gerenciar Banner', 5, 1),
+(6, 'Gerenciar Noticias', 6, 1);
 
 -- --------------------------------------------------------
 
@@ -322,6 +377,8 @@ INSERT INTO `tipo_permissao` (`tipo_administrador_id`, `permissao_id`) VALUES
 (1, 3),
 (1, 4),
 (1, 5),
+(1, 6),
+(1, 8),
 (2, 1),
 (3, 2),
 (6, 3),
@@ -409,7 +466,7 @@ ALTER TABLE `administrador`
 -- AUTO_INCREMENT de tabela `auditoria`
 --
 ALTER TABLE `auditoria`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=151;
 
 --
 -- AUTO_INCREMENT de tabela `banner`
@@ -427,13 +484,13 @@ ALTER TABLE `contato`
 -- AUTO_INCREMENT de tabela `noticias`
 --
 ALTER TABLE `noticias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `permissao`
 --
 ALTER TABLE `permissao`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de tabela `produtos`
