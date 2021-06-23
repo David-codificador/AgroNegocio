@@ -13,21 +13,13 @@ class NoticiasController extends Controller {
 
         $bo = new \App\Models\BO\NoticiasBO();
 
-        $busca = (isset($parametro[1])) ? $parametro[1] : null;
-
         $condicao = "";
         $valorCondicao = [];
 
-
-        if ($busca) {
-            $condicao .= " titulo like '%?%'";
-            array_push($valoresCondicao, "$busca");
-        }
-
-        $noticias = $bo->listarVetor(\App\Models\Entidades\Noticias::TABELA['nome'], ["*"], 5, null, $condicao, $valorCondicao,"", true);
+        $noticias = $bo->listarVetor(\App\Models\Entidades\Noticias::TABELA['nome'], ["*"], 5, null, $condicao, $valorCondicao);
         $this->setViewParam('noticias', $noticias);
 
-  
+
         $this->render("home/noticias", "Notícias", $css, $js, 3);
     }
 

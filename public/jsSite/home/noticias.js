@@ -113,9 +113,3 @@ function fechar() {
 buscarInfo(++window.pagina);
 
 
-//fazer busca de Notícia
-function buscar() {
-    var busca = $("#busca").val();
-
-    window.location.replace($("#link").val() + 'noticias/' + busca);
-}
