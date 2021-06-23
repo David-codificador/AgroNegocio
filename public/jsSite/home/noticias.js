@@ -32,7 +32,7 @@ function buscarInfo(pagina) {
                     div += '<h3><a onclick="ver(' + dados.retorno[i].id + ')">' + dados.retorno[i].titulo + '</a></h3>';
                     div += ' <div class="blog_one_text">';
                     div += '</div>';
-                    div += '<div class="read_more_btn">';
+                    div += '<div class="read_more_btn" style=" cursor: pointer;">';
                     div += '<a onclick="ver(' + dados.retorno[i].id + ')"><i class="fa fa-angle-right"></i>Ver Mais</a>';
                     div += '</div>';
                     div += '</div>';
