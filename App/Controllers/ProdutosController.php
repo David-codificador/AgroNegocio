@@ -14,6 +14,47 @@ class ProdutosController extends Controller {
         $this->render("home/produtos", "Produtos", $css, $js, 3);
     }
 
+    public function visualizar() {
+        $css = null;
+        $js = null;
+
+        $this->redirect('produtos');
+    }
+
+    public function ver() {
+
+        $id = $_POST['id'];
+        if(is_numeric($id) and $id > 0){
+            $bo = new \App\Models\BO\ProdutosBO();
+
+            $tabela = \App\Models\Entidades\Produtos::TABELA['nome'];
+            //Execulta a listagem dos registros
+            $resultado = $bo->selecionarVetor($tabela, ['*'], 'id = ?', [$id], '');
+
+            if ($resultado) {
+                $resultado['titulo_formatado'] = $this->remover_caracter($resultado['titulo']);
+                
+                $retorno = [
+                    'status' => 1,
+                    'retorno' => $resultado
+                ];
+            } else {
+                $retorno = [
+                    'status' => 0,
+                    'msg' => 'Produto não encontrado!'
+                ];
+            }
+        } else {
+            $retorno = [
+                'status' => 0,
+                'msg' => 'Parametro incorreto!'
+            ];            
+        }
+        
+        echo json_encode($retorno);
+        exit();
+    }
+    
     public function buscarInformacoes() {
 
         $quantidade = $_POST['quantidade'];

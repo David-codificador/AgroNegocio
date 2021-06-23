@@ -27,7 +27,7 @@ function buscarInfo(pagina) {
                     div += '</div>';
                     div += '<div class="hover_box">';
                     //usar str_replace ?
-                    div += '<a href="'+ $('#link').val() +'produtos/detalhesproduto/'+ dados.retorno[i].id +'"><span class="icon-left-arrow"></span></a>';
+                    div += '<a onclick="ver('+ dados.retorno[i].id +')"><span class="icon-left-arrow"></span></a>';
                     div += '</div>';
                     div += '</div>';
                     div += '</div>';
@@ -57,6 +57,49 @@ function buscarInfo(pagina) {
 
     });
 
+}
+
+function ver(id){
+    $("#listar").addClass('d-none');
+    $("#ver").removeClass('d-none');
+    $('html, body').animate({scrollTop : 0},800);
+        
+    $.ajax({
+        type: 'post',
+        dataType: 'json',
+        data: {id: id},
+        url: $("#link").val() + 'produtos/ver',
+        beforeSend: function () {
+            $("#ver-carregando").html("<img src='" + $("#recurso").val() + "/imagemSite/carregando.gif' class='gif-carregando' />");
+        },
+        success: function (dados) {
+            $("#ver-carregando").html('');
+            $("#ver-conteudo").removeClass('d-none');
+            
+            if (dados.status == 1) {
+                $("#titulo-ver").text(dados.retorno.titulo);
+                $("#descricao-ver").html(dados.retorno.descricao);
+                $("#imagem-ver").attr('src', $("#recurso").val() + 'imagemSite/produtos/' + dados.retorno.imagem);
+                
+                window.history.replaceState('', '', $("#link").val() + 'produtos/visualizar/' + id + '-'+dados.retorno.titulo_formatado);
+            } else {
+               alert(dados.msg);
+               fechar();
+            }
+        },
+
+        error: function () {
+            $("#info_ajax").html('Nosso sistema está passando por instabilidades, aguarde alguns instantes e tente novamente!');
+            // alert('Nosso sistema está passando por instabilidades, aguarde alguns instantes e tente novamente!');
+        }
+
+    });
+}
+
+function fechar(){
+    $("#listar").removeClass('d-none');
+    $("#ver").addClass('d-none');  
+    $("#ver-conteudo").addClass('d-none');
 }
 
 buscarInfo(++window.pagina);
