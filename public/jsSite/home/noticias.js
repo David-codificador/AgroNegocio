@@ -1,11 +1,12 @@
 window.pagina = 0;
 window.quantidade = 8;
+window.busca = '';
 
 function buscarInfo(pagina) {
     $.ajax({
         type: 'post',
         dataType: 'json',
-        data: {pagina: pagina, quantidade: window.quantidade},
+        data: {pagina: pagina, quantidade: window.quantidade, busca: busca},
         url: $("#link").val() + 'noticias/listarAjax',
         beforeSend: function () {
             // $("#carregando").html("<img src='" + $("#recurso").val() + "/imagemSite/loading.gif' id='carregando' class='gif-carregando' />");
@@ -108,8 +109,34 @@ function fechar() {
     $("#listar").removeClass('d-none');
     $("#ver").addClass('d-none');
     $("#ver-conteudo").addClass('d-none');
+    
+    window.history.replaceState('', '', $("#link").val() + 'noticias');
 }
 
 buscarInfo(++window.pagina);
 
+
+function buscar(){
+    fechar();
+    $("#info_ajax").empty();
+    $("#limpa_busca").removeClass('d-none');
+    window.pagina = 0;
+    window.busca = $("#input-busca").val();
+    
+    window.history.replaceState('', '', $("#link").val() + 'noticias/busca');
+
+    buscarInfo(++window.pagina);
+}
+
+
+function limpar(){
+    fechar();
+    $("#info_ajax").empty();
+    $("#limpa_busca").addClass('d-none');
+    window.pagina = 0;
+    window.busca = '';
+    $("#input-busca").val('');
+
+    buscarInfo(++window.pagina);
+}
 

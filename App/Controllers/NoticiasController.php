@@ -68,16 +68,25 @@ class NoticiasController extends Controller {
 
         $quantidade = $_POST['quantidade'];
         $p = $_POST['pagina'];
+        $busca = $_POST['busca'];
 
         //Formata o número inicial da páginação
         $pagina = $p * $quantidade - $quantidade;
 
+        $condicao = "";
+        $valoresCondicao = [];
 
+        if ($busca) {
+            $condicao .= "titulo like '%?%'";
+            array_push($valoresCondicao, "$busca");
+        }
+
+        
         $bo = new \App\Models\BO\NoticiasBO();
 
         $tabela = \App\Models\Entidades\Noticias::TABELA['nome'];
         //Execulta a listagem dos registros
-        $resultado = $bo->listarVetor($tabela, ["*", "date_format(data_publicacao, '%d-%m-%Y') as data_publicacao"], $quantidade, $pagina, null, [], "");
+        $resultado = $bo->listarVetor($tabela, ["*", "date_format(data_publicacao, '%d-%m-%Y') as data_publicacao"], $quantidade, $pagina, $condicao, $valoresCondicao, "");
 
 
         if ($resultado) {
@@ -87,10 +96,17 @@ class NoticiasController extends Controller {
                 'retorno' => $resultado
             ];
         } else {
-            $retorno = [
-                'status' => 0,
-                'msg' => 'Fim dos registros!'
-            ];
+            if($busca and $pagina == 0){
+                $retorno = [
+                    'status' => 0,
+                    'msg' => 'Registro não encontrado!'
+                ];
+            } else {
+                $retorno = [
+                    'status' => 0,
+                    'msg' => 'Fim dos registros!'
+                ];                
+            }
         }
 
         echo json_encode($retorno);

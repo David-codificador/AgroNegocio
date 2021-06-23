@@ -8,6 +8,7 @@
             <div class="col-xl-12">
                 <div class="our_projects_btn">
                     <a class="thm-btn" onclick="buscarInfo(++window.pagina)" id="mais" >Mais Notícias</a>
+                    <a class="thm-btn d-none" onclick="limpar()" id="limpa_busca" >Limpar Busca</a>
                     <div id="fim_registros"></div>
                 </div>
             </div>
@@ -37,7 +38,7 @@
                 <div class="sidebar">
                     <div class="sidebar__single sidebar__search">
                         <div class="sidebar__search-form">
-                            <input type="search" placeholder="Buscar Notícia" id="busca">
+                            <input type="search" placeholder="Buscar Notícia" id="input-busca">
                             <button type="submit" onclick="buscar()"><i class="icon-magnifying-glass"></i></button>
                         </div>
                     </div>
