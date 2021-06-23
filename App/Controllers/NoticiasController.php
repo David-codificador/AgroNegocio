@@ -11,14 +11,98 @@ class NoticiasController extends Controller {
         $css = null;
         $js = null;
 
+        $bo = new \App\Models\BO\NoticiasBO();
+
+        $busca = (isset($parametro[1])) ? $parametro[1] : null;
+
+        $condicao = "";
+        $valorCondicao = [];
+
+
+        if ($busca) {
+            $condicao .= " titulo like '%?%'";
+            array_push($valoresCondicao, "$busca");
+        }
+
+        $noticias = $bo->listarVetor(\App\Models\Entidades\Noticias::TABELA['nome'], ["*"], 5, null, $condicao, $valorCondicao,"", true);
+        $this->setViewParam('noticias', $noticias);
+
+  
         $this->render("home/noticias", "Notícias", $css, $js, 3);
     }
 
-    public function detalhesnoticia() {
+    public function visualizar() {
         $css = null;
         $js = null;
 
-        $this->render("home/detalhesnoticia", "Detalhes da Notícia", $css, $js, 3);
+        $this->redirect('noticias');
+    }
+
+    public function ver() {
+
+        $id = $_POST['id'];
+        if (is_numeric($id) and $id > 0) {
+            $bo = new \App\Models\BO\NoticiasBO();
+
+            $tabela = \App\Models\Entidades\Noticias::TABELA['nome'];
+
+            $resultado = $bo->selecionarVetor($tabela, ['*', "date_format(data_publicacao, '%d-%m-%Y') as data_publicacao"], 'id = ?', [$id], '');
+
+            if ($resultado) {
+                $resultado['titulo_formatado'] = $this->remover_caracter($resultado['titulo']);
+
+                $retorno = [
+                    'status' => 1,
+                    'retorno' => $resultado
+                ];
+            } else {
+                $retorno = [
+                    'status' => 0,
+                    'msg' => 'Notícia não encontrada!'
+                ];
+            }
+        } else {
+            $retorno = [
+                'status' => 0,
+                'msg' => 'Parametro incorreto!'
+            ];
+        }
+
+        echo json_encode($retorno);
+        exit();
+    }
+
+    public function listarAjax() {
+
+        $quantidade = $_POST['quantidade'];
+        $p = $_POST['pagina'];
+
+        //Formata o número inicial da páginação
+        $pagina = $p * $quantidade - $quantidade;
+
+
+        $bo = new \App\Models\BO\NoticiasBO();
+
+        $tabela = \App\Models\Entidades\Noticias::TABELA['nome'];
+        //Execulta a listagem dos registros
+        $resultado = $bo->listarVetor($tabela, ["*", "date_format(data_publicacao, '%d-%m-%Y') as data_publicacao"], $quantidade, $pagina, null, [], "");
+
+
+        if ($resultado) {
+            $retorno = [
+                'status' => 1,
+                'msg' => '',
+                'retorno' => $resultado
+            ];
+        } else {
+            $retorno = [
+                'status' => 0,
+                'msg' => 'Fim dos registros!'
+            ];
+        }
+
+        echo json_encode($retorno);
+        exit();
     }
 
     public function cadastro() {
@@ -73,7 +157,7 @@ class NoticiasController extends Controller {
 
                 $img->carrega('./public/imagemSite/noticias/' . $nome)
                         ->hexa('#FFFFFF')
-                        ->redimensiona(370, 484, 'preenchimento')
+                        ->redimensiona(770, 427, 'preenchimento')
                         ->grava('./public/imagemSite/noticias/' . $nome, 80);
 
                 $dados['imagem'] = $nome;

@@ -6,7 +6,7 @@ function buscarInfo(pagina) {
         type: 'post',
         dataType: 'json',
         data: {pagina: pagina, quantidade: window.quantidade},
-        url: $("#link").val() + 'produtos/buscarInformacoes',
+        url: $("#link").val() + 'noticias/listarAjax',
         beforeSend: function () {
             // $("#carregando").html("<img src='" + $("#recurso").val() + "/imagemSite/loading.gif' id='carregando' class='gif-carregando' />");
         },
@@ -16,27 +16,34 @@ function buscarInfo(pagina) {
             if (dados.status == 1) {
 
                 var div = '';
-                              
+
                 for (var i = 0; dados.retorno.length > i; i++) {
                     div += '<div class="col-xl-3 col-lg-3">';
-                    div += '<div class="recent_project_single mrb-30">';
-                    div += '<div class="project_img_box">';
-                    div += '<img src=' + $("#recurso").val() + "/imagemSite/produtos/" + dados.retorno[i].imagem + ' />';
-                    div += '<div class="project_content">';
-                    div += '<h3>' + dados.retorno[i].titulo + '</h3>';
+                    div += '<div class="blog_one_single mb-30">';
+                    div += '<div class="blog_one_image">';
+                    div += '<div class="blog_image">';
+                    div += '<img src=' + $("#recurso").val() + "/imagemSite/noticias/" + dados.retorno[i].imagem + ' />';
+                    div += '<div class="blog_one_date_box">';
+                    div += '<p>' + dados.retorno[i].data_publicacao + '</p>';
                     div += '</div>';
-                    div += '<div class="hover_box">';
-                    //usar str_replace ?
-                    div += '<a onclick="ver('+ dados.retorno[i].id +')"><span class="icon-left-arrow" style="cursor: pointer !important;"></span></a>';
+                    div += '</div>';
+                    div += ' <div class="blog-one__content">';
+                    div += '<h3><a onclick="ver(' + dados.retorno[i].id + ')">' + dados.retorno[i].titulo + '</a></h3>';
+                    div += ' <div class="blog_one_text">';
+                    div += '</div>';
+                    div += '<div class="read_more_btn">';
+                    div += '<a onclick="ver(' + dados.retorno[i].id + ')"><i class="fa fa-angle-right"></i>Ver Mais</a>';
+                    div += '</div>';
+                    div += '</div>';
                     div += '</div>';
                     div += '</div>';
                     div += '</div>';
                     div += '</div>';
                 }
-                  
-              
+
+
                 $("#info_ajax").append(div);
-                         
+
                 $("#mais").show();
                 $("#fim_registros").html("");
             } else {
@@ -58,32 +65,34 @@ function buscarInfo(pagina) {
 
 }
 
-function ver(id){
+function ver(id) {
     $("#listar").addClass('d-none');
     $("#ver").removeClass('d-none');
-    $('html, body').animate({scrollTop : 0},800);
-        
+    $('html, body').animate({scrollTop: 0}, 800);
+
     $.ajax({
         type: 'post',
         dataType: 'json',
         data: {id: id},
-        url: $("#link").val() + 'produtos/ver',
+        url: $("#link").val() + 'noticias/ver',
         beforeSend: function () {
             $("#ver-carregando").html("<img src='" + $("#recurso").val() + "/imagemSite/carregando.gif' class='gif-carregando' />");
         },
         success: function (dados) {
             $("#ver-carregando").html('');
             $("#ver-conteudo").removeClass('d-none');
-            
+
             if (dados.status == 1) {
+                $("#imagem-ver").attr('src', $("#recurso").val() + 'imagemSite/noticias/' + dados.retorno.imagem);
+                 $("#data_publicacao-ver").text(dados.retorno.data_publicacao);
                 $("#titulo-ver").text(dados.retorno.titulo);
-                $("#descricao-ver").html(dados.retorno.descricao);
-                $("#imagem-ver").attr('src', $("#recurso").val() + 'imagemSite/produtos/' + dados.retorno.imagem);
-                
-                window.history.replaceState('', '', $("#link").val() + 'produtos/visualizar/' + id + '-'+dados.retorno.titulo_formatado);
+                $("#texto-ver").html(dados.retorno.texto);
+
+
+                window.history.replaceState('', '', $("#link").val() + 'noticias/visualizar/' + id + '-' + dados.retorno.titulo_formatado);
             } else {
-               alert(dados.msg);
-               fechar();
+                alert(dados.msg);
+                fechar();
             }
         },
 
@@ -95,11 +104,18 @@ function ver(id){
     });
 }
 
-function fechar(){
+function fechar() {
     $("#listar").removeClass('d-none');
-    $("#ver").addClass('d-none');  
+    $("#ver").addClass('d-none');
     $("#ver-conteudo").addClass('d-none');
 }
 
 buscarInfo(++window.pagina);
 
+
+//fazer busca de Notícia
+function buscar() {
+    var busca = $("#busca").val();
+
+    window.location.replace($("#link").val() + 'noticias/' + busca);
+}
