@@ -53,7 +53,7 @@
                                     </div>
                                     <div class="sidebar__post-content">
                                         <h3>
-                                            <a href="<?= LINK ?>noticias/<?= $item['id'] ?>/<?= $this->remover_caracter($item['titulo']) ?>.html"><?= $item['titulo'] ?></a>
+                                            <a onclick="ver(<?= $item['id'] ?>)"><?= $item['titulo'] ?></a>
                                         </h3>
                                     </div>
                                 </li>
