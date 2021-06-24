@@ -36,11 +36,11 @@
 
         <!-- template styles -->
         <link rel="stylesheet" href="<?= CSSSITE ?>style.css">
-        <link rel="stylesheet" href="<?= CSSSITE ?>responsive.css">
-         <link rel="stylesheet" type="text/css" href="<?= CSSSITE ?>estilo.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="<?= CSSSITE ?>estilo.css" media="screen">
+
         <?= $css ?>
         <?= $arquivoCSS ?>
-
+        <link rel="stylesheet" href="<?= CSSSITE ?>responsive.css">
     </head>
 
     <body>

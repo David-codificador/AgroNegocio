@@ -1,4 +1,3 @@
-
 <div class="main-page">
     <div class="container-fluid">
         <div class="row page-title-div">
@@ -26,11 +25,11 @@
                             <div class="row">
                                 <div class="col-md-12">                                
                                     <div class="input-group mt-2">
-                                                <input type="busca" class="form-control" id="busca" placeholder="Digite sua busca" autocomplete="off">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-primary" type="button" onclick="buscar()">Buscar</button>
-                                                </span>
-                                            </div>
+                                        <input type="busca" class="form-control" id="busca" placeholder="Digite sua busca" autocomplete="off">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-primary" type="button" onclick="buscar()">Buscar</button>
+                                        </span>
+                                    </div>
                                     <div class="card">
                                         <h5 class="card-header text-center p-10">Registros</h5>
                                         <div class="card-body">
