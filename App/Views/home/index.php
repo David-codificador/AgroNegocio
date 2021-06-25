@@ -31,15 +31,12 @@
             <div class="col-xl-4 col-lg-4">
                 <div class="details_one_single  wow fadeInUp" data-wow-delay="300ms">
                     <div class="details_one_icon">
-                        <span class="icon-harvest"></span>
+                        <span class="icon-farmer"></span>
                     </div>
                     <div class="details_one_content">
-                        <h2>Frutas de Qualidade<br>é Aqui</h2>
+                        <h2>Compromisso com os <br>Produtores</h2>
                     </div>
-                    <div class="details_one_count_box">
-                        <h3>01</h3>
-                    </div>
-                </div>
+                       </div>
             </div>
             <div class="col-xl-4 col-lg-4">
                 <div class="details_one_single wow fadeInUp" data-wow-delay="600ms">
@@ -47,11 +44,8 @@
                         <span class="icon-customer-review"></span>
                     </div>
                     <div class="details_one_content">
-                        <h2>Innovative economy<br>solutions</h2>
-                    </div>
-                    <div class="details_one_count_box">
-                        <h3>02</h3>
-                    </div>
+                        <h2>Cliente <br>Satisfeito</h2>
+                    </div> 
                 </div>
             </div>
             <div class="col-xl-4 col-lg-4">
@@ -60,16 +54,65 @@
                         <span class="icon-calendar"></span>
                     </div>
                     <div class="details_one_content">
-                        <h2>Better Live stock<br>Farming</h2>
-                    </div>
-                    <div class="details_one_count_box">
-                        <h3>01</h3>
+                        <h2>Cumprir todas as<br>Metas</h2>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+ <section class="about_one">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="about1_img">
+                            <div class="about1_shape_1"></div>
+                            <img src="<?=IMAGEMSITE?>sobre_1.jpg" alt="About-Img">
+                            <div class="about1_icon-box">
+                                <div class="circle">
+                                    <span class="icon-handshake"></span>
+                                </div>
+                            </div>
+                            <div class="about_img_2">
+                                <img src="<?=IMAGEMSITE?>sobre_2.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="block-title text-left">
+                            <p>Sobre a nossa Empresa</p>
+                            <h3>A nossa empresa é focada na venda de frutas</h3>
+                        </div>
+                        <div class="about_content">
+                            <div class="text">
+                                <p>Temos aqui os melhores produtos e sempre buscamos a satisfação de nossos clientes.</p>
+                            </div>
+                            <div class="about1_icon_wrap">
+                                <div class="about1_icon_single">
+                                    <div class="about1_icon">
+                                        <span class="icon-phone-call"></span>
+                                    </div>
+                                    <p>Atendemos todo o Brasil</p>
+                                </div>
+                                <div class="about1_icon_single">
+                                    <div class="about1_icon">
+                                        <span class="icon-meeting"></span>
+                                    </div>
+                                    <p>Procurando sempre ouvir os clientes e servi-los da melhor forma</p>
+                                </div>
+                            </div>
+                            <div class="bottom_text">
+                                <p>Se deseja conhecer mais sobre nós clique no botão abaixo.</p>
+                            </div>
+                            <div class="about1__button-block">
+                                <a href="<?=LINK?>sobre" class="thm-btn about_one__btn">Saber Mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 <section class="faq_one">
     <div class="container">
@@ -158,7 +201,7 @@
                         <div class="blog_four_image">
                             <img src="<?= IMAGEMSITE ?>/noticias/<?= $item['imagem'] ?>" alt="">
                             <div class="blog_four_date_box">
-                                <p>30 Oct, 2019</p>
+                                <p><?= $item['data_publicacao'] ?></p>
                             </div>
                         </div>
                         <div class="blog-four_content">
