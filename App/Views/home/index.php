@@ -136,58 +136,6 @@
         </div>
     </div>
 </section>
- <section class="recent-project">
-            <div class="container">
-                <div class="block-title text-center">
-                    <p>explore projects</p>
-                    <h3>our Recent projects</h3>
-                    <div class="leaf">
-                        <img src="assets/images/resources/leaf.png" alt="">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4">
-                        <div class="recent_project_single wow fadeInUp" data-wow-delay="300ms">
-                            <div class="project_img_box">
-                                <img src="assets/images/project/recent-pro-img-1.jpg" alt="Recent Project Img">
-                                <div class="project_content">
-                                    <h3>organic<br>solutions</h3>
-                                </div>
-                                <div class="hover_box">
-                                    <a href="service-detail.html"><span class="icon-left-arrow"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4">
-                        <div class="recent_project_single wow fadeInUp" data-wow-delay="600ms">
-                            <div class="project_img_box">
-                                <img src="assets/images/project/recent-pro-img-2.jpg" alt="Recent Project Img">
-                                <div class="project_content">
-                                    <h3>Harvest<br>Innovations</h3>
-                                </div>
-                                <div class="hover_box">
-                                    <a href="service-detail.html"><span class="icon-left-arrow"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4">
-                        <div class="recent_project_single wow fadeInUp" data-wow-delay="900ms">
-                            <div class="project_img_box">
-                                <img src="assets/images/project/recent-pro-img-3.jpg" alt="Recent Project Img">
-                                <div class="project_content">
-                                    <h3>Agriculture<br>farming</h3>
-                                </div>
-                                <div class="hover_box">
-                                    <a href="service-detail.html"><span class="icon-left-arrow"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
 <section class="blog_four">
     <div class="container">
@@ -199,51 +147,36 @@
 
                 </div>
                 <div class="blog-four_btn">
-                    <a href="" class="thm-btn">View All News</a>
+                    <a href="<?= LINK ?>noticias" class="thm-btn">Ir para Notícias</a>
                 </div>
             </div>
-            <div class="col-xl-4 col-lg-4">
-                <div class="blog_four_single wow fadeInLeft" data-wow-delay="300ms">
-                    <div class="blog_four_image">
-                        <img src="<?= IMAGEMSITE ?>blog/blog-4-img-1.jpg" alt="">
-                        <div class="blog_four_date_box">
-                            <p>30 Oct, 2019</p>
+            <?php
+            foreach ($viewVar['noticias'] as $item) {
+                ?>
+                <div class="col-xl-4 col-lg-4">
+                    <div class="blog_four_single wow fadeInLeft" data-wow-delay="300ms">
+                        <div class="blog_four_image">
+                            <img src="<?= IMAGEMSITE ?>/noticias/<?= $item['imagem'] ?>" alt="">
+                            <div class="blog_four_date_box">
+                                <p>30 Oct, 2019</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="blog-four_content">
-                        <ul class="list-unstyled blog-four_meta">
-                            <li><a href="news_detail.html"><i class="far fa-user-circle"></i> Admin</a></li>
-                            <li><a href="news_detail.html"><i class="far fa-comments"></i> 2 Comments</a></li>
-                        </ul>
-                        <h3><a href="news_detail.html" class="blog_four_title">Agriculture Miracle you<br>Don't
-                                Know About</a></h3>
-                        <div class="blog_four_read_more_btn">
-                            <a href="news_detail.html"><i class="fa fa-angle-right"></i>Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4">
-                <div class="blog_four_single wow fadeInLeft" data-wow-delay="600ms">
-                    <div class="blog_four_image">
-                        <img src="<?= IMAGEMSITE ?>blog/blog-4-img-2.jpg" alt="">
-                        <div class="blog_four_date_box">
-                            <p>30 Oct, 2019</p>
-                        </div>
-                    </div>
-                    <div class="blog-four_content">
-                        <ul class="list-unstyled blog-four_meta">
-                            <li><a href="news_detail.html"><i class="far fa-user-circle"></i> Admin</a></li>
-                            <li><a href="news_detail.html"><i class="far fa-comments"></i> 2 Comments</a></li>
-                        </ul>
-                        <h3><a href="news_detail.html" class="blog_four_title">Winter Wheat Harvest
-                                Gathering<br>Momentum</a></h3>
-                        <div class="blog_four_read_more_btn">
-                            <a href="news_detail.html"><i class="fa fa-angle-right"></i>Read More</a>
+                        <div class="blog-four_content">
+                            <ul class="list-unstyled blog-four_meta">
+                                <li><a href="news_detail.html"><i class="far fa-user-circle"></i> Admin</a></li>
+                                <li><a href="news_detail.html"><i class="far fa-comments"></i> 2 Comments</a></li>
+                            </ul>
+                            <h3><a href="news_detail.html" class="blog_four_title">Agriculture Miracle you<br>Don't
+                                    Know About</a></h3>
+                            <div class="blog_four_read_more_btn">
+                                <a href="news_detail.html"><i class="fa fa-angle-right"></i>Read More</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                <?php
+            }
+            ?>
         </div>
     </div>
 </section>

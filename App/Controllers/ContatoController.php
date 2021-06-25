@@ -415,7 +415,7 @@ class ContatoController extends Controller {
             ";
 
             $assunto = "Contato pelo Site";
-            $destino = "maxuel@maxxconstrutora.com.br";
+            $destino = "natan_seabra@hotmail.com";
             $usuario = $dados['nome'];
             $emailEnvio = $dados['email'];
 

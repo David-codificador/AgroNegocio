@@ -178,7 +178,8 @@
 <script src="<?= JSSITE ?>jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="<?= JSSITE ?>bootstrap-datepicker.min.js"></script>
 <script src="<?= JSSITE ?>nouislider.min.js"></script>
-<script src="<?= JSSITE ?>isotope.js"></script>
+<script src="<?= JSSITE ?>jquery.mask.js"></script>
+<script src="isotope.js"></script>
 <script src="http://maps.google.com/maps/api/js?key=AIzaSyATY4Rxc8jNvDpsK8ZetC7JyN4PFVYGCGM"></script>
 
 

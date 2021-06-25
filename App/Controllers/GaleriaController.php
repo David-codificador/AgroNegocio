@@ -11,6 +11,11 @@ class GaleriaController extends Controller {
         $css = null;
         $js = null;
 
+        $bo = new \App\Models\BO\GaleriaBO();
+
+        $galeria = $bo->listarVetor(\App\Models\Entidades\Galeria::TABELA['nome'], ["*"], null, null, "", [], "id desc");
+        $this->setViewParam('galeria', $galeria);
+
         $this->render("home/galeria", "Galeria", $css, $js, 3);
     }
 
@@ -196,7 +201,7 @@ class GaleriaController extends Controller {
 
         $this->render('galeria/listar', "Listagem", $css, $js, 1);
     }
-    
+
     public function excluir($parametro) {
         $this->validaAdministrador();
         $this->nivelAcesso(7);
@@ -235,8 +240,8 @@ class GaleriaController extends Controller {
 
         $this->redirect('galeria/listar');
     }
-    
-     public function editarImagem() {
+
+    public function editarImagem() {
         $this->validaAdministrador();
         $this->nivelAcesso(5);
         $id = $_POST['id'];
@@ -304,8 +309,8 @@ class GaleriaController extends Controller {
 
         $this->redirect('galeria/listar');
     }
-    
-        public function editar($parametro) {
+
+    public function editar($parametro) {
         $this->validaAdministrador();
         $this->nivelAcesso(2);
 
@@ -332,5 +337,5 @@ class GaleriaController extends Controller {
             $this->redirect('galeria/listar');
         }
     }
-    
+
 }

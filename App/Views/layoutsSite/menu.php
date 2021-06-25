@@ -13,8 +13,8 @@
             </div>
             <div class="topbar-one__right">
                 <div class="topbar-one__social cor_rede_social">
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>

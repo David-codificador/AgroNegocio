@@ -1,3 +1,7 @@
-.input-group.contact__btn {
-    margin-bottom: 20px !important;
+.get_quote_one_form_inner .input_box input[type="text"] {
+    background: #d4e6de !important;
+}
+
+.get_quote_one_form_inner .input_box textarea {
+    background: #d4e6de !important;
 }
