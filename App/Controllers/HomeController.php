@@ -17,7 +17,7 @@ class HomeController extends Controller {
 
         //Listar Notícias 
         $bo = new \App\Models\BO\NoticiasBO();
-        $noticias = $bo->listarVetor(\App\Models\Entidades\Noticias::TABELA['nome'], ['*'], 2, null, "", [], 'rand()');
+        $noticias = $bo->listarVetor(\App\Models\Entidades\Noticias::TABELA['nome'], ["*", "date_format(data_publicacao, '%d-%m-%Y') as data_publicacao"], 2, null, "", [], 'rand()');
         $this->setViewParam('noticias', $noticias);
 
 

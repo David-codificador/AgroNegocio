@@ -206,13 +206,11 @@
                         </div>
                         <div class="blog-four_content">
                             <ul class="list-unstyled blog-four_meta">
-                                <li><a href="news_detail.html"><i class="far fa-user-circle"></i> Admin</a></li>
-                                <li><a href="news_detail.html"><i class="far fa-comments"></i> 2 Comments</a></li>
+                                
                             </ul>
-                            <h3><a href="news_detail.html" class="blog_four_title">Agriculture Miracle you<br>Don't
-                                    Know About</a></h3>
+                            <h3><a href="news_detail.html" class="blog_four_title"><?=$item['titulo']?></a></h3>
                             <div class="blog_four_read_more_btn">
-                                <a href="news_detail.html"><i class="fa fa-angle-right"></i>Read More</a>
+                                <a href="#"><i class="fa fa-angle-right"></i>Ver Mais</a>
                             </div>
                         </div>
                     </div>
