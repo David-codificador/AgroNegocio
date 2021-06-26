@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 23-Jun-2021 às 02:42
+-- Tempo de geração: 26-Jun-2021 às 02:39
 -- Versão do servidor: 10.4.17-MariaDB
 -- versão do PHP: 8.0.0
 
@@ -220,7 +220,49 @@ INSERT INTO `auditoria` (`id`, `tipo`, `administrador`, `tabela`, `campos`, `des
 (147, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-06-22 16:49:39', '::1'),
 (148, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-22 16:53:22', '::1'),
 (149, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-06-22 16:56:54', '::1'),
-(150, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-22 16:57:29', '::1');
+(150, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-22 16:57:29', '::1'),
+(151, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-06-22 22:44:58', '::1'),
+(152, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-22 22:45:15', '::1'),
+(153, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-06-23 11:56:09', '::1'),
+(154, 1, 1, 'Noticias', 'campo Titulo: teste de um produto<br>campo Descricao: <p>cara</p>\r\n<br><img src=\"http://localhost/AgroNegocio//public/imagemSite/noticias/23_06_2021_11_56_28_245.jpg\" style=\"width: 100%\">', 'O  David, efetuou o cadastro de um nova Notícia.', '2021-06-23 11:56:28', '::1'),
+(155, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-23 11:56:36', '::1'),
+(156, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-06-24 11:38:04', '::1'),
+(157, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-24 11:43:05', '::1'),
+(158, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-06-24 11:43:54', '::1'),
+(159, 2, 1, 'Tipo de administrador', '<br>Permissões concedidas:<br>Gerenciar Galeria<br>', 'O  David, efetuou a edição da tipo de administrador \"Administrador\".', '2021-06-24 11:44:37', '::1'),
+(160, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-24 11:44:37', '::1'),
+(161, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-06-24 11:44:39', '::1'),
+(162, 1, 1, 'Galeria', '<img src=\"http://localhost/AgroNegocio//public/imagemSite/galeria/24_06_2021_11_52_56_898.jpg\" style=\"width: 100%\">', 'O  David, efetuou o cadastro de um nova imagem na Galeria.', '2021-06-24 11:52:56', '::1'),
+(163, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-24 15:25:46', '::1'),
+(164, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-06-24 15:40:36', '::1'),
+(165, 1, 1, 'Galeria', '<img src=\"http://localhost/AgroNegocio//public/imagemSite/galeria/24_06_2021_03_45_00_663.jpeg\" style=\"width: 100%\">', 'O  David, efetuou o cadastro de um nova imagem na Galeria.', '2021-06-24 15:45:00', '::1'),
+(166, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-24 15:50:00', '::1'),
+(167, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-06-24 15:50:11', '::1'),
+(168, 3, 1, 'Galeria', '-', 'O  David, efetuou a exclusão de uma imagem da galeria: 24_06_2021_03_45_00_663.jpeg', '2021-06-24 15:52:46', '::1'),
+(169, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-24 15:57:46', '::1'),
+(170, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-06-24 16:31:29', '::1'),
+(171, 2, 1, 'Galeria', 'campo imagem editado de:<br><img src=\"http://localhost/AgroNegocio//public/imagemSite/galeria/24_06_2021_11_52_56_898.jpg\" /><br>para:<br><img src=\"http://localhost/AgroNegocio//public/imagemSite/galeria/24_06_2021_04_35_29_147.jpg\" /><br>', 'O  David, efetuou a edição da imagem do galeria ', '2021-06-24 16:35:29', '::1'),
+(172, 2, 1, 'Galeria', 'campo imagem editado de:<br><img src=\"http://localhost/AgroNegocio//public/imagemSite/galeria/24_06_2021_04_35_29_147.jpg\" /><br>para:<br><img src=\"http://localhost/AgroNegocio//public/imagemSite/galeria/24_06_2021_04_36_26_206.jpg\" /><br>', 'O  David, efetuou a edição da imagem do galeria ', '2021-06-24 16:36:26', '::1'),
+(173, 2, 1, 'Galeria', 'campo imagem editado de:<br><img src=\"http://localhost/AgroNegocio//public/imagemSite/galeria/24_06_2021_04_36_26_206.jpg\" /><br>para:<br><img src=\"http://localhost/AgroNegocio//public/imagemSite/galeria/24_06_2021_04_36_38_131.jpeg\" /><br>', 'O  David, efetuou a edição da imagem do galeria ', '2021-06-24 16:36:38', '::1'),
+(174, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-24 16:51:54', '::1'),
+(175, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-06-25 08:55:28', '::1'),
+(176, 1, 1, 'Galeria', '<img src=\"http://localhost/AgroNegocio//public/imagemSite/galeria/25_06_2021_08_55_35_277.jpg\" style=\"width: 100%\">', 'O  David, efetuou o cadastro de um nova imagem na Galeria.', '2021-06-25 08:55:35', '::1'),
+(177, 1, 1, 'Galeria', '<img src=\"http://localhost/AgroNegocio//public/imagemSite/galeria/25_06_2021_08_55_42_653.jpg\" style=\"width: 100%\">', 'O  David, efetuou o cadastro de um nova imagem na Galeria.', '2021-06-25 08:55:42', '::1'),
+(178, 1, 1, 'Galeria', '<img src=\"http://localhost/AgroNegocio//public/imagemSite/galeria/25_06_2021_08_55_49_196.jpg\" style=\"width: 100%\">', 'O  David, efetuou o cadastro de um nova imagem na Galeria.', '2021-06-25 08:55:49', '::1'),
+(179, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-25 08:55:54', '::1'),
+(180, 1, NULL, 'Contato', 'campo Nome: david<br>campo Telefone: 433232323232323<br>campo Email: natan_seabra@hotmail.com.br<br>campo Assunto: teste<br>campo Status: 2<br>', 'O Internauta efetuou o cadastro de um novo Contato', '2021-06-25 09:57:33', '::1'),
+(181, 1, NULL, 'Contato', 'campo Nome: david<br>campo Telefone: 433232323232323<br>campo Email: natan_seabra@hotmail.com.br<br>campo Assunto: teste<br>campo Status: 2<br>', 'O Internauta efetuou o cadastro de um novo Contato', '2021-06-25 09:57:37', '::1'),
+(182, 1, NULL, 'Contato', 'campo Nome: david<br>campo Telefone: 433232323232323<br>campo Email: natan_seabra@hotmail.com.br<br>campo Assunto: teste<br>campo Status: 2<br>', 'O Internauta efetuou o cadastro de um novo Contato', '2021-06-25 09:57:39', '::1'),
+(183, 1, NULL, 'Contato', 'campo Nome: david<br>campo Telefone: 433232323232323<br>campo Email: natan_seabra@hotmail.com.br<br>campo Assunto: teste<br>campo Status: 2<br>', 'O Internauta efetuou o cadastro de um novo Contato', '2021-06-25 09:57:41', '::1'),
+(184, 1, NULL, 'Contato', 'campo Nome: david<br>campo Telefone: 433232323232323<br>campo Email: natan_seabra@hotmail.com.br<br>campo Assunto: teste<br>campo Status: 2<br>', 'O Internauta efetuou o cadastro de um novo Contato', '2021-06-25 09:57:48', '::1'),
+(185, 1, NULL, 'Contato', 'campo Nome: ts<br>campo Telefone: 9292121221212<br>campo Email: tesda@gmail.com<br>campo Assunto: teste<br>campo Status: 2<br>', 'O Internauta efetuou o cadastro de um novo Contato', '2021-06-25 09:59:01', '::1'),
+(186, 1, NULL, 'Contato', 'campo Nome: ts<br>campo Telefone: 9292121221212<br>campo Email: tesda@gmail.com<br>campo Assunto: teste<br>campo Status: 2<br>', 'O Internauta efetuou o cadastro de um novo Contato', '2021-06-25 09:59:57', '::1'),
+(187, 1, NULL, 'Contato', 'campo Nome: david<br>campo Telefone: teste<br>campo Email: dads@gmail.com<br>campo Assunto: teste<br>campo Status: 2<br>', 'O Internauta efetuou o cadastro de um novo Contato', '2021-06-25 10:00:11', '::1'),
+(188, 1, NULL, 'Contato', 'campo Nome: david<br>campo Telefone: (22) 22222-22<br>campo Email: natan_seabr@hotmail.com<br>campo Assunto: teste<br>campo Status: 2<br>', 'O Internauta efetuou o cadastro de um novo Contato', '2021-06-25 11:08:15', '::1'),
+(189, 1, NULL, 'Contato', 'campo Nome: Gustavo<br>campo Telefone: (22) 22222-2222<br>campo Email: dnatan008@gmail.com<br>campo Assunto: teste de primeira mão e vai<br>campo Status: 2<br>', 'O Internauta efetuou o cadastro de um novo Contato', '2021-06-25 11:23:49', '::1'),
+(190, 1, NULL, 'Contato', 'campo Nome: te<br>campo Telefone: (22) 22222-2222<br>campo Email: natan_asearba@gmail.com<br>campo Assunto: dadad<br>campo Status: 2<br>', 'O Internauta efetuou o cadastro de um novo Contato', '2021-06-25 11:32:12', '::1'),
+(191, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-06-25 11:42:18', '::1'),
+(192, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-25 11:42:35', '::1');
 
 -- --------------------------------------------------------
 
@@ -258,6 +300,38 @@ CREATE TABLE `contato` (
   `status` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Extraindo dados da tabela `contato`
+--
+
+INSERT INTO `contato` (`id`, `nome`, `telefone`, `email`, `assunto`, `status`) VALUES
+(1, 'david', '(22) 22222-22', 'natan_seabr@hotmail.com', 'teste', 2),
+(2, 'Gustavo', '(22) 22222-2222', 'dnatan008@gmail.com', 'teste de primeira mão e vai', 2),
+(3, 'te', '(22) 22222-2222', 'natan_asearba@gmail.com', 'dadad', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `galeria`
+--
+
+CREATE TABLE `galeria` (
+  `id` int(11) NOT NULL,
+  `imagem` varchar(45) DEFAULT NULL,
+  `data_cadastro` datetime NOT NULL,
+  `administrador_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `galeria`
+--
+
+INSERT INTO `galeria` (`id`, `imagem`, `data_cadastro`, `administrador_id`) VALUES
+(1, '24_06_2021_04_36_38_131.jpeg', '2021-06-24 11:52:56', 1),
+(3, '25_06_2021_08_55_35_277.jpg', '2021-06-25 08:55:35', 1),
+(4, '25_06_2021_08_55_42_653.jpg', '2021-06-25 08:55:42', 1),
+(5, '25_06_2021_08_55_49_196.jpg', '2021-06-25 08:55:49', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -278,7 +352,8 @@ CREATE TABLE `noticias` (
 --
 
 INSERT INTO `noticias` (`id`, `imagem`, `titulo`, `texto`, `data_publicacao`, `administrador_id`) VALUES
-(4, '22_06_2021_04_10_58_286.jpeg', 'teste 1', '<p><strong>teste fasa</strong></p>\r\n', '2021-06-22 15:53:44', 1);
+(4, '22_06_2021_04_10_58_286.jpeg', 'teste de primeira mão e vai', '<p><strong>teste fasa</strong></p>\r\n', '2021-06-22 15:53:44', 1),
+(5, '23_06_2021_11_56_28_245.jpg', 'teste de um produto', '<p>cara</p>\r\n', '2021-06-23 11:56:28', 1);
 
 -- --------------------------------------------------------
 
@@ -303,7 +378,8 @@ INSERT INTO `permissao` (`id`, `permissao`, `nivel`, `status`) VALUES
 (3, 'Gerenciar Auditoria', 3, 1),
 (4, 'Gerenciar Produtos', 4, 1),
 (5, 'Gerenciar Banner', 5, 1),
-(6, 'Gerenciar Noticias', 6, 1);
+(6, 'Gerenciar Noticias', 6, 1),
+(7, 'Gerenciar Galeria', 7, 1);
 
 -- --------------------------------------------------------
 
@@ -378,6 +454,7 @@ INSERT INTO `tipo_permissao` (`tipo_administrador_id`, `permissao_id`) VALUES
 (1, 4),
 (1, 5),
 (1, 6),
+(1, 7),
 (1, 8),
 (2, 1),
 (3, 2),
@@ -416,6 +493,13 @@ ALTER TABLE `banner`
 --
 ALTER TABLE `contato`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Índices para tabela `galeria`
+--
+ALTER TABLE `galeria`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_administrador_id_ga_idx` (`administrador_id`);
 
 --
 -- Índices para tabela `noticias`
@@ -466,7 +550,7 @@ ALTER TABLE `administrador`
 -- AUTO_INCREMENT de tabela `auditoria`
 --
 ALTER TABLE `auditoria`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=151;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=193;
 
 --
 -- AUTO_INCREMENT de tabela `banner`
@@ -478,13 +562,19 @@ ALTER TABLE `banner`
 -- AUTO_INCREMENT de tabela `contato`
 --
 ALTER TABLE `contato`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de tabela `galeria`
+--
+ALTER TABLE `galeria`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de tabela `noticias`
 --
 ALTER TABLE `noticias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de tabela `permissao`
@@ -525,6 +615,12 @@ ALTER TABLE `auditoria`
 --
 ALTER TABLE `banner`
   ADD CONSTRAINT `fk_administrador_id` FOREIGN KEY (`administrador_id`) REFERENCES `administrador` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Limitadores para a tabela `galeria`
+--
+ALTER TABLE `galeria`
+  ADD CONSTRAINT `fk_administrador_id_ga` FOREIGN KEY (`administrador_id`) REFERENCES `administrador` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Limitadores para a tabela `noticias`
