@@ -413,7 +413,8 @@ class ContatoController extends Controller {
             ";
             
             $assunto = "Contato pelo Site";
-            $destino = "maxuel@maxxconstrutora.com.br";
+            //Aqui vc insere o email para qual o internauta irá te contatar.
+            $destino = "natan_seabra@hotmail.com";
             $usuario = $dados['nome'];
             $emailEnvio = $dados['email'];
             
