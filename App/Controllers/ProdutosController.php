@@ -7,16 +7,31 @@ use App\Models\Entidades\Canvas;
 
 class ProdutosController extends Controller {
 
-    public function index() {
+    public function index($parametro) {
         $css = null;
         $js = null;
+
+        if (isset($parametro[0]) and is_numeric($parametro[0])) {
+            $this->setViewParam('id', $parametro[0]);
+        } else {
+            $this->setViewParam('id', '0');
+        }
+
 
         $this->render("home/produtos", "Produtos", $css, $js, 3);
     }
 
-    public function visualizar() {
+    public function visualizar($parametro) {
         $css = null;
         $js = null;
+
+        if (isset($parametro[0])) {
+            $parametro = explode("-", $parametro[0]);
+            $id = $parametro[0];
+        } else {
+            $id = null;
+        }
+
 
         $this->redirect('produtos');
     }
@@ -24,7 +39,7 @@ class ProdutosController extends Controller {
     public function ver() {
 
         $id = $_POST['id'];
-        if(is_numeric($id) and $id > 0){
+        if (is_numeric($id) and $id > 0) {
             $bo = new \App\Models\BO\ProdutosBO();
 
             $tabela = \App\Models\Entidades\Produtos::TABELA['nome'];
@@ -33,7 +48,7 @@ class ProdutosController extends Controller {
 
             if ($resultado) {
                 $resultado['titulo_formatado'] = $this->remover_caracter($resultado['titulo']);
-                
+
                 $retorno = [
                     'status' => 1,
                     'retorno' => $resultado
@@ -48,13 +63,13 @@ class ProdutosController extends Controller {
             $retorno = [
                 'status' => 0,
                 'msg' => 'Parametro incorreto!'
-            ];            
+            ];
         }
-        
+
         echo json_encode($retorno);
         exit();
     }
-    
+
     public function buscarInformacoes() {
 
         $quantidade = $_POST['quantidade'];
