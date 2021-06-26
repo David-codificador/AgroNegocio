@@ -208,9 +208,9 @@
                             <ul class="list-unstyled blog-four_meta">
                                 
                             </ul>
-                            <h3><a href="news_detail.html" class="blog_four_title"><?=$item['titulo']?></a></h3>
+                            <h3><a href="<?=LINK?>noticias/visualizar/<?= $item['id'] ?>" class="blog_four_title"><?=$item['titulo']?></a></h3>
                             <div class="blog_four_read_more_btn">
-                                <a href="#"><i class="fa fa-angle-right"></i>Ver Mais</a>
+                                <a href="<?=LINK?>noticias/visualizar/<?= $item['id'] ?>"><i class="fa fa-angle-right"></i>Ver Mais</a>
                             </div>
                         </div>
                     </div>

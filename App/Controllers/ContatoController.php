@@ -419,7 +419,7 @@ class ContatoController extends Controller {
             $usuario = $dados['nome'];
             $emailEnvio = $dados['email'];
 
-            $this->enviar_email($corpoEmail, $assunto, $destino, $usuario, $emailEnvio);
+            //$respostaEnvioEmail = $this->enviar_email($corpoEmail, $assunto, $destino, $usuario, $emailEnvio);
 
             $x = '';
             foreach ($dados as $indice => $value) {

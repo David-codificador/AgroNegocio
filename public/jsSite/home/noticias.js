@@ -2,6 +2,10 @@ window.pagina = 0;
 window.quantidade = 8;
 window.busca = '';
 
+if($("#id").val() > 0){
+    ver($("#id").val());
+}
+
 function buscarInfo(pagina) {
     $.ajax({
         type: 'post',

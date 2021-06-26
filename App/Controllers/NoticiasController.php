@@ -7,7 +7,7 @@ use App\Models\Entidades\Canvas;
 
 class NoticiasController extends Controller {
 
-    public function index() {
+    public function index($parametro) {
         $css = null;
         $js = null;
 
@@ -19,15 +19,27 @@ class NoticiasController extends Controller {
         $noticias = $bo->listarVetor(\App\Models\Entidades\Noticias::TABELA['nome'], ["*"], 5, null, $condicao, $valorCondicao, "rand()");
         $this->setViewParam('noticias', $noticias);
 
-
+        if(isset($parametro[0]) and is_numeric($parametro[0])){
+            $this->setViewParam('id', $parametro[0]);
+        } else {
+            $this->setViewParam('id', '0');            
+        }
+        
         $this->render("home/noticias", "Notícias", $css, $js, 3);
     }
 
-    public function visualizar() {
+    public function visualizar($parametro) {
         $css = null;
         $js = null;
-
-        $this->redirect('noticias');
+        
+        if(isset($parametro[0])){
+            $parametro = explode("-", $parametro[0]);
+            $id = $parametro[0];
+        } else {
+            $id = null;
+        }
+        
+        $this->redirect('noticias/index/' . $id);
     }
 
     public function ver() {

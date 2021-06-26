@@ -1,4 +1,4 @@
-
+<input type="hidden" id="id" value="<?=$viewVar['id']?>" />
 <section class="blog-one news">
     <div class="container" id="listar">
         <div class="row" id="info_ajax">
