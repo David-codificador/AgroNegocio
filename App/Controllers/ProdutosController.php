@@ -33,7 +33,7 @@ class ProdutosController extends Controller {
         }
 
 
-        $this->redirect('produtos');
+         $this->redirect('produtos/index/' . $id);
     }
 
     public function ver() {
