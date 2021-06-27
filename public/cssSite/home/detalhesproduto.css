@@ -4,3 +4,7 @@
 .recent-project.recent_project_detail {
     background: #eeeeee !important;
 }
+
+:root {
+    --thm-gray: #252824 !important;
+}

@@ -1,3 +1,7 @@
 .project_detail {
     padding: 60px 0 93px !important;
 }
+
+:root {
+    --thm-gray: #252824 !important;
+}

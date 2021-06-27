@@ -5,3 +5,7 @@
 .get_quote_one_form_inner .input_box textarea {
     background: #d4e6de !important;
 }
+
+:root {
+    --thm-gray: #252824 !important;
+}

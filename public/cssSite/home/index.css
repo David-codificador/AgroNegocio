@@ -5,3 +5,7 @@
 .blog_four {
     padding: 25px 0 114px !important;
 }
+
+:root {
+    --thm-gray: #252824 !important;
+}

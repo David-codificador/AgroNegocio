@@ -10,3 +10,7 @@
 .sidebar__post {
      background: #f8f8f8 !important;
 }
+
+:root {
+    --thm-gray: #252824 !important;
+}

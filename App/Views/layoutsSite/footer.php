@@ -33,7 +33,7 @@
                                     <img src="<?= IMAGEMSITE ?>/noticias/<?= $item['imagem'] ?>" alt="">
                                 </div>
                                 <div class="footer-widget__news_text">
-                                    <p><a href="<?=LINK?>noticias/visualizar/<?= $item['id'] ?>"><?=$item['titulo']?></a></p>
+                                    <p><a href="<?= LINK ?>noticias/visualizar/<?= $item['id'] ?>"><?= $item['titulo'] ?></a></p>
                                 </div>
                                 <div class="footer-widget__news_date_box">
                                     <p><?= $item['data_publicacao'] ?></p>
@@ -69,13 +69,7 @@
 <div class="site-footer_bottom">
     <div class="container">
         <div class="site-footer_bottom_copyright">
-            <p>@ All copyright 2020, <a href="#">Layerdrops.com</a></p>
-        </div>
-        <div class="site-footer_bottom_menu">
-            <ul class="list-unstyled">
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Use</a></li>
-            </ul>
+            <p>&copy; Copyright <?= date("Y") ?>. "AgroNegócio". TODOS OS DIREITOS RESERVADOS.</p>
         </div>
     </div>
 </div>
@@ -90,26 +84,21 @@
 
 
 <div class="side-menu__block">
-
-
     <div class="side-menu__block-overlay custom-cursor__overlay">
         <div class="cursor"></div>
         <div class="cursor-follower"></div>
     </div><!-- /.side-menu__block-overlay -->
     <div class="side-menu__block-inner ">
         <div class="side-menu__top justify-content-end">
-
             <a href="#" class="side-menu__toggler side-menu__close-btn"><img
-                    src="<?= IMAGEMSITE ?>shapes/close-1-1.png" alt=""></a>
+                    src="<?= IMAGEMSITE ?>shapes/close-1-1-2.png" alt=""></a>
         </div><!-- /.side-menu__top -->
-
-
-        <nav class="mobile-nav__container">
+     <nav class="mobile-nav__container">
             <!-- content is loading via js -->
         </nav>
         <div class="side-menu__sep"></div><!-- /.side-menu__sep -->
         <div class="side-menu__content">
-            <p><a href="mailto:needhelp@tripo.com">needhelp@agrikol.com</a> <br> <a href="tel:888-999-0000">888 999
+            <p><a href="mailto:needhelp@tripo.com">teste@</a> <br> <a href="tel:888-999-0000">888 999
                     0000</a></p>
             <div class="side-menu__social">
                 <a href="#"><i class="fab fa-facebook-square"></i></a>
@@ -120,9 +109,6 @@
         </div><!-- /.side-menu__content -->
     </div><!-- /.side-menu__block-inner -->
 </div><!-- /.side-menu__block -->
-
-
-
 <div class="search-popup">
     <div class="search-popup__overlay custom-cursor__overlay">
         <div class="cursor"></div>
