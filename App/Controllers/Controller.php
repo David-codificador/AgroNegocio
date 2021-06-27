@@ -45,6 +45,10 @@ abstract class Controller {
             require_once PATH . '/App/Views/layouts/footer.php';
         } else {
 
+            $bo = new \App\Models\BO\NoticiasBO();
+
+            $noticiasIndex = $bo->listarVetor(\App\Models\Entidades\Noticias::TABELA['nome'], ['*', "date_format(data_publicacao, '%d-%m-%Y') as data_publicacao"], 2, null, null, [], "rand()");
+
             $arquivoCSS = '<link href="' . CSSSITE . 'style.css" type="text/css" rel="stylesheet"/>';
 
             if (file_exists("./public/cssSite/" . $view . ".css")) {

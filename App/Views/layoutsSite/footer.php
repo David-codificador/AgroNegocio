@@ -1,86 +1,63 @@
 
 <footer class="site-footer">
-    <div class="site-footer_farm_image"><img src="<?=IMAGEMSITE ?>resources/site-footer-farm.png"
+    <div class="site-footer_farm_image"><img src="<?= IMAGEMSITE ?>resources/site-footer-farm.png"
                                              alt="Farm Image"></div>
     <div class="container">
         <div class="row">
             <div class="col-xl-4 col-lg-4 col-md-6">
-                <div class="footer-widget__column wow fadeInUp" data-wow-delay="100ms">
-                    <div class="footer-widget__title">
-                        <h3>About</h3>
-                    </div>
-                    <div class="footer-widget_about_text">
-                        <p>Lorem ipsum dolor sit amet, adipiscing elit. Nulla placerat posuere dui. Pellentesque
-                            venenatis sem non lacus ac auctor.</p>
-                    </div>
-                    <form>
-                        <div class="footer_input-box">
-                            <input type="Email" placeholder="Email Address">
-                            <button type="submit" class="button"><i class="fa fa-check"></i></button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="col-xl-2 col-lg-2 col-md-6">
                 <div class="footer-widget__column margin_left_30 wow fadeInUp" data-wow-delay="200ms">
                     <div class="footer-widget__title">
                         <h3>Explore</h3>
                     </div>
                     <ul class="footer-widget__links-list list-unstyled">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="service.html">Services</a></li>
-                        <li><a href="projects.html">Our Projects</a></li>
-                        <li><a href="farmers.html">Meet the Farmers</a></li>
-                        <li><a href="news.html">Latest News</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="<?= LINK ?>">Início</a></li>
+                        <li><a href="<?= LINK ?>sobre">Sobre</a></li>
+                        <li><a href="<?= LINK ?>produtos">Produtos</a></li>
+                        <li><a href="<?= LINK ?>noticias">Notícias</a></li>
+                        <li><a href="<?= LINK ?>galeria">Galeria</a></li>
+                        <li><a href="<?= LINK ?>contato">Contato</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="col-xl-3 col-lg-3 col-md-6">
+            <div class="col-xl-4 col-lg-4 col-md-6">
                 <div class="footer-widget__column wow fadeInUp" data-wow-delay="300ms">
                     <div class="footer-widget__title">
-                        <h3>News</h3>
+                        <h3>Notícias</h3>
                     </div>
                     <ul class="footer-widget__news list-unstyled">
-                        <li>
-                            <div class="footer-widget__news_image">
-                                <img src="<?=IMAGEMSITE ?>resources/footer-1-img-1.jpg" alt="">
-                            </div>
-                            <div class="footer-widget__news_text">
-                                <p><a href="news_detail.html"> Learn 10 Best Tips for New Formers</a></p>
-                            </div>
-                            <div class="footer-widget__news_date_box">
-                                <p>30 Oct, 2019</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="footer-widget__news_image">
-                                <img src="<?=IMAGEMSITE ?>resources/footer-1-img-2.jpg" alt="">
-                            </div>
-                            <div class="footer-widget__news_text">
-                                <p><a href="news_detail.html">Farmer Sentiment Darkens Hopes Fade</a></p>
-                            </div>
-                            <div class="footer-widget__news_date_box">
-                                <p>30 Oct, 2019</p>
-                            </div>
-                        </li>
+                        <?php
+                        foreach ($noticiasIndex as $item) {
+                            ?> 
+                            <li>
+                                <div class="footer-widget__news_image">
+                                    <img src="<?= IMAGEMSITE ?>/noticias/<?= $item['imagem'] ?>" alt="">
+                                </div>
+                                <div class="footer-widget__news_text">
+                                    <p><a href="<?=LINK?>noticias/visualizar/<?= $item['id'] ?>"><?=$item['titulo']?></a></p>
+                                </div>
+                                <div class="footer-widget__news_date_box">
+                                    <p><?= $item['data_publicacao'] ?></p>
+                                </div>
+                            </li>
+                            <?php
+                        }
+                        ?>       
                     </ul>
                 </div>
             </div>
             <div class="col-xl-3 col-lg-3 col-md-6">
                 <div class="footer-widget__column wow fadeInUp" data-wow-delay="400ms">
                     <div class="footer-widget__title">
-                        <h3>Contact</h3>
+                        <h3>Contato</h3>
                     </div>
                     <div class="footer-widget_contact">
                         <p>66 Broklyn Street, New Town<br>DC 5752, New Yrok</p>
-                        <a href="mailto:needhelp@agrikol.com">needhelp@agrikol.com</a><br>
+                        <a href="mailto:needhelp@agrikol.com">natan_seabra@hotmail.com</a><br>
                         <a href="tel:666-888-0000">666 888 0000</a>
                         <div class="site-footer__social">
-                            <a href="#"><i class="fab fa-facebook-square"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
                             <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-dribbble"></i></a>
                         </div>
                     </div>
                 </div>
@@ -123,7 +100,7 @@
         <div class="side-menu__top justify-content-end">
 
             <a href="#" class="side-menu__toggler side-menu__close-btn"><img
-                    src="<?=IMAGEMSITE ?>shapes/close-1-1.png" alt=""></a>
+                    src="<?= IMAGEMSITE ?>shapes/close-1-1.png" alt=""></a>
         </div><!-- /.side-menu__top -->
 
 
