@@ -14,8 +14,8 @@ class App {
     public  $controllerName;
 
     public function __construct() {
-        define('TITLESITE',          "AgroNegocio");
-        define('APP_HOST',           $_SERVER['HTTP_HOST'] . "/AgroNegocio");
+        define('TITLESITE',          "siteAgro");
+        define('APP_HOST',           $_SERVER['HTTP_HOST'] . "/siteAgro");
         define('PATH',               realpath('./'));
         define('LINK',               'http://' . APP_HOST . '/');
         define('RECURSO',            LINK . '/public/');
@@ -35,7 +35,7 @@ class App {
         define('DB_HOST',            "localhost");
         define('DB_USER',            "root");
         define('DB_PASSWORD',        "");
-        define('DB_NAME',            "agronegocio");
+        define('DB_NAME',            "siteagro");
 
         $this->url();
     }
