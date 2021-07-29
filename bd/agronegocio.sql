@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 26-Jun-2021 às 02:39
+-- Tempo de geração: 29-Jul-2021 às 19:08
 -- Versão do servidor: 10.4.17-MariaDB
 -- versão do PHP: 8.0.0
 
@@ -262,7 +262,50 @@ INSERT INTO `auditoria` (`id`, `tipo`, `administrador`, `tabela`, `campos`, `des
 (189, 1, NULL, 'Contato', 'campo Nome: Gustavo<br>campo Telefone: (22) 22222-2222<br>campo Email: dnatan008@gmail.com<br>campo Assunto: teste de primeira mão e vai<br>campo Status: 2<br>', 'O Internauta efetuou o cadastro de um novo Contato', '2021-06-25 11:23:49', '::1'),
 (190, 1, NULL, 'Contato', 'campo Nome: te<br>campo Telefone: (22) 22222-2222<br>campo Email: natan_asearba@gmail.com<br>campo Assunto: dadad<br>campo Status: 2<br>', 'O Internauta efetuou o cadastro de um novo Contato', '2021-06-25 11:32:12', '::1'),
 (191, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-06-25 11:42:18', '::1'),
-(192, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-25 11:42:35', '::1');
+(192, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-25 11:42:35', '::1'),
+(193, 1, NULL, 'Contato', 'campo Nome: David<br>campo Telefone: (62) 99813-1151<br>campo Email: natan_seabra@hotmail.com<br>campo Assunto: teste<br>campo Status: 2<br>', 'O Internauta efetuou o cadastro de um novo Contato', '2021-06-26 08:18:46', '::1'),
+(194, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-06-28 09:08:42', '::1'),
+(195, 3, 1, 'Produtos', '-', 'O  David, efetuou a exclusão de um Podruto.', '2021-06-28 09:09:03', '::1'),
+(196, 3, 1, 'Produtos', '-', 'O  David, efetuou a exclusão de um Podruto.', '2021-06-28 09:09:07', '::1'),
+(197, 3, 1, 'Produtos', '-', 'O  David, efetuou a exclusão de um Podruto.', '2021-06-28 09:09:09', '::1'),
+(198, 3, 1, 'Produtos', '-', 'O  David, efetuou a exclusão de um Podruto.', '2021-06-28 09:09:11', '::1'),
+(199, 3, 1, 'Produtos', '-', 'O  David, efetuou a exclusão de um Podruto.', '2021-06-28 09:09:14', '::1'),
+(200, 3, 1, 'Produtos', '-', 'O  David, efetuou a exclusão de um Podruto.', '2021-06-28 09:09:18', '::1'),
+(201, 3, 1, 'Produtos', '-', 'O  David, efetuou a exclusão de um Podruto.', '2021-06-28 09:09:21', '::1'),
+(202, 2, 1, 'Noticias', 'campo Titulo editado de: \"teste de um produto\" para \"Produto 1\"<br>', 'O  David, efetuou a edição das informações de uma Notícia', '2021-06-28 09:09:41', '::1'),
+(203, 2, 1, 'Noticias', 'campo Titulo editado de: \"teste de primeira mão e vai\" para \"produto 2\"<br>campo Descricao editado de: \"<p><strong>teste fasa</strong></p>\r\n\" para \"<p><u><em><strong>teste</strong></em></u></p>\r\n\"<br>', 'O  David, efetuou a edição das informações de uma Notícia', '2021-06-28 09:09:58', '::1'),
+(204, 3, 1, 'Contato', 'campo Status: Excluido', 'O  David, efetuou a exclusão do contato\"te\".', '2021-06-28 09:10:30', '::1'),
+(205, 3, 1, 'Contato', 'campo Status: Excluido', 'O  David, efetuou a exclusão do contato\"Gustavo\".', '2021-06-28 09:10:33', '::1'),
+(206, 3, 1, 'Contato', 'campo Status: Excluido', 'O  David, efetuou a exclusão do contato\"David\".', '2021-06-28 09:10:36', '::1'),
+(207, 3, 1, 'Contato', 'campo Status: Excluido', 'O  David, efetuou a exclusão do contato\"david\".', '2021-06-28 09:10:43', '::1'),
+(208, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-06-28 09:14:16', '::1'),
+(209, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-07-01 11:31:44', '::1'),
+(210, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-07-01 11:36:48', '::1'),
+(211, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-07-01 18:32:17', '::1'),
+(212, 1, 1, 'Banner', '<img src=\"http://localhost/AgroNegocio//public/imagemSite/banner/01_07_2021_06_32_25_933.jpg\" style=\"width: 100%\">', 'O  David, efetuou o cadastro de um novo Banner.', '2021-07-01 18:32:25', '::1'),
+(213, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-07-01 18:32:31', '::1'),
+(214, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-07-01 18:32:42', '::1'),
+(215, 3, 1, 'Banner', '-', 'O  David, efetuou a exclusão de um banner: 01_07_2021_06_32_25_933.jpg', '2021-07-01 18:32:47', '::1'),
+(216, 1, 1, 'Banner', '<img src=\"http://localhost/AgroNegocio//public/imagemSite/banner/01_07_2021_06_36_04_724.gif\" style=\"width: 100%\">', 'O  David, efetuou o cadastro de um novo Banner.', '2021-07-01 18:36:04', '::1'),
+(217, 3, 1, 'Banner', '-', 'O  David, efetuou a exclusão de um banner: 01_07_2021_06_36_04_724.gif', '2021-07-01 18:36:09', '::1'),
+(218, 1, 1, 'Banner', '<img src=\"http://localhost/AgroNegocio//public/imagemSite/banner/01_07_2021_06_36_19_425.jpg\" style=\"width: 100%\">', 'O  David, efetuou o cadastro de um novo Banner.', '2021-07-01 18:36:20', '::1'),
+(219, 3, 1, 'Banner', '-', 'O  David, efetuou a exclusão de um banner: 01_07_2021_06_36_19_425.jpg', '2021-07-01 18:37:04', '::1'),
+(220, 1, 1, 'Banner', '<img src=\"http://localhost/AgroNegocio//public/imagemSite/banner/01_07_2021_06_37_13_382.jpg\" style=\"width: 100%\">', 'O  David, efetuou o cadastro de um novo Banner.', '2021-07-01 18:37:13', '::1'),
+(221, 3, 1, 'Banner', '-', 'O  David, efetuou a exclusão de um banner: 01_07_2021_06_37_13_382.jpg', '2021-07-01 18:37:16', '::1'),
+(222, 1, 1, 'Banner', '<img src=\"http://localhost/AgroNegocio//public/imagemSite/banner/01_07_2021_06_38_24_159.jpg\" style=\"width: 100%\">', 'O  David, efetuou o cadastro de um novo Banner.', '2021-07-01 18:38:24', '::1'),
+(223, 2, 1, 'Banner', 'campo imagem editado de:<br><img src=\"http://localhost/AgroNegocio//public/imagemSite/banner/01_07_2021_06_38_24_159.jpg\" /><br>para:<br><img src=\"http://localhost/AgroNegocio//public/imagemSite/banner/01_07_2021_06_39_56_149.jpg\" /><br>', 'O  David, efetuou a edição da imagem do banner ', '2021-07-01 18:39:57', '::1'),
+(224, 3, 1, 'Banner', '-', 'O  David, efetuou a exclusão de um banner: 17_06_2021_02_49_31_272.png', '2021-07-01 18:41:24', '::1'),
+(225, 3, 1, 'Banner', '-', 'O  David, efetuou a exclusão de um banner: 17_06_2021_03_27_34_214.png', '2021-07-01 18:41:26', '::1'),
+(226, 1, 1, 'Banner', '<img src=\"http://localhost/AgroNegocio//public/imagemSite/banner/01_07_2021_06_41_36_532.jpg\" style=\"width: 100%\">', 'O  David, efetuou o cadastro de um novo Banner.', '2021-07-01 18:41:36', '::1'),
+(227, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-07-01 21:09:11', '::1'),
+(228, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-07-12 15:44:31', '::1'),
+(229, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-07-12 15:44:58', '::1'),
+(230, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-07-12 15:49:12', '::1'),
+(231, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-07-29 08:37:46', '::1'),
+(232, 2, 1, 'Banner', 'campo imagem editado de:<br><img src=\"http://localhost/AgroNegocio//public/imagemSite/banner/01_07_2021_06_39_56_149.jpg\" /><br>para:<br><img src=\"http://localhost/AgroNegocio//public/imagemSite/banner/29_07_2021_08_37_58_132.png\" /><br>', 'O  David, efetuou a edição da imagem do banner ', '2021-07-29 08:37:58', '::1'),
+(233, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-07-29 08:38:07', '::1'),
+(234, 5, 1, 'administrador', NULL, 'O Administrador David acessou o sistema!', '2021-07-29 11:04:17', '::1'),
+(235, 5, 1, 'administrador', NULL, 'O Administrador  saiu do sistema!', '2021-07-29 11:04:43', '::1');
 
 -- --------------------------------------------------------
 
@@ -282,8 +325,8 @@ CREATE TABLE `banner` (
 --
 
 INSERT INTO `banner` (`id`, `imagem`, `data_cadastro`, `administrador_id`) VALUES
-(2, '17_06_2021_03_27_34_214.png', '2021-06-17 14:27:43', 1),
-(3, '17_06_2021_02_49_31_272.png', '2021-06-17 14:49:31', 1);
+(8, '29_07_2021_08_37_58_132.png', '2021-07-01 18:38:24', 1),
+(9, '01_07_2021_06_41_36_532.jpg', '2021-07-01 18:41:36', 1);
 
 -- --------------------------------------------------------
 
@@ -305,9 +348,10 @@ CREATE TABLE `contato` (
 --
 
 INSERT INTO `contato` (`id`, `nome`, `telefone`, `email`, `assunto`, `status`) VALUES
-(1, 'david', '(22) 22222-22', 'natan_seabr@hotmail.com', 'teste', 2),
-(2, 'Gustavo', '(22) 22222-2222', 'dnatan008@gmail.com', 'teste de primeira mão e vai', 2),
-(3, 'te', '(22) 22222-2222', 'natan_asearba@gmail.com', 'dadad', 2);
+(1, 'david', '(22) 22222-22', 'natan_seabr@hotmail.com', 'teste', 0),
+(2, 'Gustavo', '(22) 22222-2222', 'dnatan008@gmail.com', 'teste de primeira mão e vai', 0),
+(3, 'te', '(22) 22222-2222', 'natan_asearba@gmail.com', 'dadad', 0),
+(4, 'David', '(62) 99813-1151', 'natan_seabra@hotmail.com', 'teste', 0);
 
 -- --------------------------------------------------------
 
@@ -352,8 +396,8 @@ CREATE TABLE `noticias` (
 --
 
 INSERT INTO `noticias` (`id`, `imagem`, `titulo`, `texto`, `data_publicacao`, `administrador_id`) VALUES
-(4, '22_06_2021_04_10_58_286.jpeg', 'teste de primeira mão e vai', '<p><strong>teste fasa</strong></p>\r\n', '2021-06-22 15:53:44', 1),
-(5, '23_06_2021_11_56_28_245.jpg', 'teste de um produto', '<p>cara</p>\r\n', '2021-06-23 11:56:28', 1);
+(4, '22_06_2021_04_10_58_286.jpeg', 'produto 2', '<p><u><em><strong>teste</strong></em></u></p>\r\n', '2021-06-22 15:53:44', 1),
+(5, '23_06_2021_11_56_28_245.jpg', 'Produto 1', '<p>cara</p>\r\n', '2021-06-23 11:56:28', 1);
 
 -- --------------------------------------------------------
 
@@ -401,15 +445,8 @@ CREATE TABLE `produtos` (
 --
 
 INSERT INTO `produtos` (`id`, `imagem`, `titulo`, `descricao`, `data_cadastro`, `administrador_id`) VALUES
-(6, '15_06_2021_08_22_01_445.jpg', 'Melancia 1', '<p>Teste</p>\r\n', '2021-06-15 08:22:01', 1),
 (7, '15_06_2021_08_25_54_601.jpg', 'Melancia 2', '<p>teste</p>\r\n', '2021-06-15 08:25:54', 1),
-(8, '15_06_2021_04_02_20_429.jpg', 'Melancia 3', '<p>teste</p>\r\n', '2021-06-15 16:02:20', 1),
-(9, '15_06_2021_04_02_33_599.jpg', 'Melancia 4', '<p>teste</p>\r\n', '2021-06-15 16:02:33', 1),
-(10, '15_06_2021_04_02_46_151.jpg', 'Melancia 5', '<p>teste</p>\r\n', '2021-06-15 16:02:46', 1),
-(11, '15_06_2021_04_02_57_572.jpg', 'Melancia 6', '<p>teste</p>\r\n', '2021-06-15 16:02:57', 1),
-(12, '15_06_2021_04_03_07_219.jpg', 'Melancia 7', '<p>teste</p>\r\n', '2021-06-15 16:03:07', 1),
-(13, '15_06_2021_04_03_18_961.jpg', 'Melancia 8', '<p>teste</p>\r\n', '2021-06-15 16:03:18', 1),
-(14, '17_06_2021_10_48_36_356.png', 'Melancia 20', '<p>teste 2</p>\r\n', '2021-06-15 16:03:35', 1);
+(8, '15_06_2021_04_02_20_429.jpg', 'Melancia 3', '<p>teste</p>\r\n', '2021-06-15 16:02:20', 1);
 
 -- --------------------------------------------------------
 
@@ -550,19 +587,19 @@ ALTER TABLE `administrador`
 -- AUTO_INCREMENT de tabela `auditoria`
 --
 ALTER TABLE `auditoria`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=193;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=236;
 
 --
 -- AUTO_INCREMENT de tabela `banner`
 --
 ALTER TABLE `banner`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de tabela `contato`
 --
 ALTER TABLE `contato`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `galeria`
