@@ -16,6 +16,8 @@
                         <li><a href="<?= LINK ?>noticias">Notícias</a></li>
                         <li><a href="<?= LINK ?>galeria">Galeria</a></li>
                         <li><a href="<?= LINK ?>contato">Contato</a></li>
+                        <li><a href="<?= LINK ?>contato"><a href="#"></a></li>
+                        <li><a href="<?= LINK ?>administrador"><i class="fa fa-cogs"></i> Configurações</a></li>
                     </ul>
                 </div>
             </div>
@@ -69,7 +71,7 @@
 <div class="site-footer_bottom">
     <div class="container">
         <div class="site-footer_bottom_copyright">
-            <p>&copy; Copyright <?= date("Y") ?>. "AgroNegócio". TODOS OS DIREITOS RESERVADOS.</p>
+            <p>&copy; Copyright <?= date("Y") ?>. "AgroNegócio". TODOS OS DIREITOS RESERVADOS. </p>
         </div>
     </div>
 </div>
@@ -93,7 +95,7 @@
             <a href="#" class="side-menu__toggler side-menu__close-btn"><img
                     src="<?= IMAGEMSITE ?>shapes/close-1-1-2.png" alt=""></a>
         </div><!-- /.side-menu__top -->
-     <nav class="mobile-nav__container">
+        <nav class="mobile-nav__container">
             <!-- content is loading via js -->
         </nav>
         <div class="side-menu__sep"></div><!-- /.side-menu__sep -->
